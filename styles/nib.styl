@@ -1,0 +1,943 @@
+border(color, args...)
+  if color is a 'color'
+    border: 1px solid color args
+  else
+    border: arguments
+
+clearfix()
+  &:before
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  zoom: 1 if support-for-ie
+
+/*
+ * Support for ie defaulting to true.
+ */
+
+support-for-ie ?= true
+
+/*
+ * Default vendor prefixes.
+ */
+
+vendor-prefixes ?= webkit moz o ms official
+
+/*
+ * Replace the given str with val in the expr.
+ */
+
+replace(expr, str, val)
+  expr = clone(expr)
+  for e, i in expr
+    if length(e) > 1
+      expr[i] = replace(e, str, val)
+    else
+      if str == e
+        expr[i] = val
+  expr
+
+/*
+ * Normalize gradient points.
+ */
+
+grad-point(pos)
+  if length(pos) == 1
+    return left pos if pos in (top bottom)
+    return pos top if pos in (left right)
+  else if pos[0] in (top bottom)
+    pos[1] pos[0]
+  else
+    pos
+
+/*
+ * Implicit color stop position.
+ */
+
+pos-in-stops(i, stops)
+  len = length(stops)
+  if len - 1 == i
+    100%
+  else if i
+    unit(i / len * 100, '%')
+  else
+    0
+
+/*
+ * Normalize color stops:
+ *
+ *   - (color pos) -> (pos color)
+ *   - (color) -> (implied-pos color)
+ *
+ */
+
+normalize-stops(stops)
+  stops = clone(stops)
+  for stop, i in stops
+    if length(stop) == 1
+      color = stop[0]
+      stop[0] = pos-in-stops(i, stops)
+      stop[1] = color
+    else if typeof(stop[1]) == 'unit'
+      pos = stop[1]
+      stop[1] = stop[0]
+      stop[0] = pos
+  stops
+
+/*
+ * Join color stops with the given translation function.
+ */
+
+join-stops(stops, translate)
+  str = ''
+  len = length(stops)
+  for stop, i in stops
+    str += ', ' if i
+    pos = stop[0]
+    color = stop[1]
+    str += translate(color, pos)
+  unquote(str)
+
+/*
+ * Legacy Webkit color stop.
+ */
+
+webkit-stop(color, pos)
+  'color-stop(%d, %s)' % (pos / 100 color)
+
+/*
+ * Standard color stop.
+ */
+
+std-stop(color, pos)
+  '%s %s' % (color pos)
+
+/*
+ * Create a linear gradient with the given start position
+ * and variable number of color stops.
+ *
+ * Examples:
+ *
+ *    background: linear-gradient(top, red, green, blue)
+ *    background: linear-gradient(bottom, red, green 50%, blue)
+ *    background: linear-gradient(bottom, red, 50% green, blue)
+ *    background: linear-gradient(bottom, red, 50% green, 90% white, blue)
+ *
+ */
+
+linear-gradient(start, stops...)
+  error('color stops required') unless length(stops)
+  prop = current-property[0]
+  val = current-property[1]
+
+  if start is a 'color'
+    unshift(stops, start)
+    start = top
+
+  stops = normalize-stops(stops)
+
+  // gradient image
+  if start[0] is a 'unit'
+    if has-canvas
+      img = linear-gradient-image(start, stops)
+      add-property(prop, replace(val, '__CALL__', img))
+    start = start[1]
+
+  // legacy webkit
+  end = grad-point(opposite-position(start))
+  webkit-legacy = '-webkit-gradient(linear, %s, %s, %s)' % (grad-point(start) end join-stops(stops, webkit-stop))
+  add-property(prop, replace(val, '__CALL__', webkit-legacy))
+
+  // vendor prefixed
+  stops = join-stops(stops, std-stop)
+  for prefix in vendor-prefixes
+    unless prefix == official
+      gradient = '-%s-linear-gradient(%s, %s)' % (prefix start stops)
+      add-property(prop, replace(val, '__CALL__', gradient))
+
+  // standard
+  'linear-gradient(%s, %s)' % (start stops)
+
+/*
+ * Create a linear gradient image with the given start position
+ * and variable number of color stops.
+ */
+
+linear-gradient-image(start, stops...)
+  error('node-canvas is required for linear-gradient-image()') unless has-canvas
+  stops = stops[0] if length(stops) == 1
+  error('gradient image size required') unless start[0] is a 'unit'
+  size = start[0]
+  start = start[1] or 'top'
+  grad = create-gradient-image(size, start)
+  stops = normalize-stops(stops)
+  add-color-stop(grad, stop[0], stop[1]) for stop in stops
+  'url(%s)' % gradient-data-uri(grad)
+
+/*
+ * Define background-image as `path` with optional width and height, adding an
+ * @2x variant.
+ *
+ * affected by github.com/LearnBoost/stylus/issues/1050 and
+ * github.com/LearnBoost/stylus/issues/1038 ... refactor when those are closed
+ */
+
+image(path, w = auto, h = auto, min_pixel_ratio = 1.5)
+  background-image: url(path)
+
+  s = 'all and (-webkit-min-device-pixel-ratio:' + min_pixel_ratio + '),'
+  s = s + '(min--moz-device-pixel-ratio:' + min_pixel_ratio + '),'
+  s = s + '(-o-min-device-pixel-ratio:' + min_pixel_ratio + '/1),'
+  s = s + '(min-device-pixel-ratio:' + min_pixel_ratio + '),'
+  s = s + '(min-resolution:' + unit(min_pixel_ratio*92, dpi) + '),'
+  s = s + '(min-resolution:' + unit(min_pixel_ratio, dppx) + ')'
+
+  @media s
+    ext = extname(path)
+    path = pathjoin(dirname(path), basename(path, ext) + '@2x' + ext)
+    background-image: url(path)
+    if w in (cover contain) and h == auto
+        h = null
+    background-size: w h
+
+overflow()
+  if arguments[0] == ellipsis
+    ellipsis()
+  else
+    overflow: arguments
+
+// helper
+
+-pos(type, args)
+  i = 0
+  position: unquote(type)
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+  {args[i += 1]}: args[i + 1] is a 'unit' ? args[i += 1] : 0
+
+/*
+ * Position utility.
+ * 
+ * Synopsis:
+ * 
+ *   fixed: <pos> [n] <pos> [n]
+ * 
+ * Examples:
+ * 
+ *     fixed: top left
+ *     fixed: top 5px left
+ *     fixed: top left 5px
+ *     fixed: top 5px left 5px
+ * 
+ */
+
+fixed()
+  -pos('fixed', arguments)
+
+/*
+ * Position utility.
+ * 
+ * Synopsis:
+ * 
+ *   absolute: <pos> [n] <pos> [n]
+ * 
+ * Examples:
+ * 
+ *     absolute: top left
+ *     absolute: top 5px left
+ *     absolute: top left 5px
+ *     absolute: top 5px left 5px
+ * 
+ */
+
+absolute()
+  -pos('absolute', arguments)
+
+/*
+ * Position utility.
+ * 
+ * Synopsis:
+ * 
+ *   relative: <pos> [n] <pos> [n]
+ * 
+ * Examples:
+ * 
+ *     relative: top left
+ *     relative: top 5px left
+ *     relative: top left 5px
+ *     relative: top 5px left 5px
+ * 
+ */
+
+relative()
+  -pos('relative', arguments)
+
+global-reset()
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td
+    reset-box-model()
+    reset-font()
+  body
+    reset-body()
+  ol, ul
+    list-style: none
+  table
+    reset-table()
+  caption, th, td
+    reset-table-cell()
+  a img
+    border: none
+
+nested-reset()
+  div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+  pre, a, abbr, acronym, address, code, del, dfn, em, img,
+  dl, dt, dd, ol, ul, li, fieldset, form, label,
+  legend, caption, tbody, tfoot, thead, tr
+    reset-box-model()
+    reset-font()
+  table
+    reset-table()
+  caption, th, td
+    reset-table-cell()
+  a img
+    border: none
+
+reset-box-model()
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+
+reset-font()
+  font-weight: inherit
+  font-style: inherit
+  font-family: inherit
+  font-size: 100%
+  vertical-align: baseline
+
+reset-body()
+  line-height: 1
+  color: black
+  background: white
+
+reset-table()
+  border-collapse: separate
+  border-spacing: 0
+  vertical-align: middle
+
+reset-table-cell()
+  text-align: left
+  font-weight: normal
+  vertical-align: middle
+
+reset-html5()
+  article, aside, canvas, details, figcaption,
+  figure, footer, header, hgroup, menu, nav,
+  section, summary, main
+    reset-box-model()
+    display: block
+  audio, canvas, video
+    display inline-block
+    *display inline
+    *zoom 1
+  audio:not([controls]),[hidden]
+    display none
+
+/*
+ * Alias "nowrap" as "no-wrap".
+ */
+
+no-wrap = unquote('nowrap')
+
+/*
+ * Helper to find out is the list of arguments have commas
+ */
+
+is-comma-list()
+  return match('\), \(', ''+arguments)
+
+/*
+ * Helper to find out if a given value is a width
+ */
+
+is-width(val)
+  if auto == val
+    return true
+  else if val && 'unit' == type(val)
+    // Stylus does not short circuit so we need to perform this as a distinct
+    // operation to prevent errors
+    return '' != unit(val)
+  return false
+
+/*
+ * Literal joining
+ */
+
+literal-join(string, literals)
+  result = unquote('')
+  first = true
+  for args in literals
+    subresult = unquote('')
+    for arg in args
+      subresult = subresult arg
+    if first
+      result = subresult
+      first = false
+    else
+      result = s('%s%s%s', result, unquote(string), subresult)
+  return result
+
+/*
+ * Replacing one value with another
+ */
+
+replace-args(args,argument,val)
+  result = ()
+  // Checking if there are values divided by comma
+  if is-comma-list(args)
+    for subargs in args
+      subresult = ()
+      for arg in subargs
+        arg = unquote(val) if arg == argument
+        push(subresult, arg)
+      subresult = literal-join(' ', subresult) if length(subresult) > 1
+      push(result, subresult)
+    result = literal-join(', ', result)
+  else
+    for arg in args
+      arg = unquote(val) if arg == argument
+      push(result, arg)
+  return result
+
+/*
+ * Vendor support for the given prop / arguments,
+ * optionally specifying the only prefixes to utilize,
+ * or those which should be ignored.
+ */
+
+vendor(prop, args, only = null, ignore = null)
+  for prefix in vendor-prefixes
+    unless (only and !(prefix in only)) or (ignore and prefix in ignore)
+      if official == prefix
+        {prop}: args
+      else
+        newargs = args
+        // Adjusting the args if needed
+        if prop in ('transition' 'transition-property')
+          newargs = replace-args(args, transform, '-' + prefix + '-transform')
+        {'-' + prefix + '-' + prop}: newargs
+
+/*
+ * Vendorize the given value.
+ */
+
+vendor-value(arg, only = null, ignore = null)
+  prop = current-property[0]
+  for prefix in vendor-prefixes
+    unless (only and !(prefix in only)) or (ignore and prefix in ignore) or official == prefix
+      add-property(prop, '-%s-%s' % (prefix arg))
+  arg
+
+/*
+ * Vendor "box-shadow" support.
+ */
+
+box-shadow()
+  vendor('box-shadow', arguments, only: webkit official)
+
+/*
+ * Vendor "user-select" support.
+ */
+
+user-select()
+  vendor('user-select', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "column-count" support.
+ */
+
+column-count()
+  vendor('column-count', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-gap" support.
+ */
+
+column-gap()
+  vendor('column-gap', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-rule" support.
+ */
+
+column-rule()
+  vendor('column-rule', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-rule-color" support.
+ */
+
+column-rule-color()
+  vendor('column-rule-color', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-rule-width" support.
+ */
+
+column-rule-width()
+  vendor('column-rule-width', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-rule-style" support.
+ */
+
+column-rule-style()
+  vendor('column-rule-style', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-width" support.
+ */
+
+column-width()
+  vendor('column-width', arguments, only: webkit moz official)
+
+/*
+ * Vendor "column-span" support.
+ */
+
+column-span()
+  vendor('column-span', arguments, only: webkit official)
+
+/*
+ * Vendor "column-fill" support.
+ */
+
+column-fill()
+  vendor('column-fill', arguments, only: moz)
+
+/*
+ * Legacy syntax support for background-clip and background-origin
+ */
+
+legacy-bg-values(property, args)
+  legacy_args = ()
+  importance = unquote('')
+  for subargs in args
+    for arg in subargs
+      if arg in (border-box padding-box content-box)
+        arg = unquote('border')  if arg == border-box
+        arg = unquote('padding') if arg == padding-box
+        arg = unquote('content') if arg == content-box
+      if arg != '!important'
+        push(legacy_args,arg)
+      else
+        importance = !important
+  vendor(property, unquote(join(', ',legacy_args)) importance, only: moz webkit)
+
+/*
+ * Vendor "background-clip" support.
+ */
+
+background-clip()
+  if arguments[0] == text
+    vendor('background-clip', arguments, only: webkit)
+  else
+    legacy-bg-values('background-clip', arguments)
+    background-clip: arguments
+
+/*
+ * Vendor "background-origin" support.
+ */
+
+background-origin()
+  legacy-bg-values('background-origin', arguments)
+  background-origin: arguments
+
+/*
+ * Vendor "background-size" support.
+ */
+
+background-size()
+  vendor('background-size', arguments, only: webkit moz official)
+
+/*
+ * Vendor "transform" support.
+ */
+
+transform()
+  vendor('transform', arguments)
+
+/*
+ * Vendor "transform-origin" support.
+ */
+transform-origin()
+    vendor('transform-origin', arguments)
+
+/*
+ * Vendor "transform-style" support.
+ */
+
+transform-style()
+  vendor('transform-style', arguments)
+
+/*
+ * Vendor "border-image" support.
+ */
+
+border-image()
+  vendor('border-image', arguments, only: webkit moz o official)
+
+/*
+ * Vendor "transition" support.
+ */
+
+transition()
+  vendor('transition', arguments)
+
+/*
+ * Vendor "transition-property" support.
+ */
+
+transition-property()
+  vendor('transition-property', arguments)
+
+/*
+ * Vendor "transition-duration" support.
+ */
+
+transition-duration()
+  vendor('transition-duration', arguments)
+
+/*
+ * Vendor "transition-timing-function" support.
+ */
+
+transition-timing-function()
+  vendor('transition-timing-function', arguments)
+
+/*
+ * Vendor "transition-delay" support.
+ */
+
+transition-delay()
+  vendor('transition-delay', arguments)
+
+/*
+ * Vendor "backface-visibility" support.
+ */
+
+backface-visibility()
+  vendor('backface-visibility', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "perspective" support.
+ */
+
+perspective()
+  if mixin
+    vendor('perspective', arguments, only: webkit moz ms official)
+  else
+    'perspective(%s)' % arguments
+
+/*
+ * Vendor "perspective-origin" support.
+ */
+
+perspective-origin()
+  vendor('perspective-origin', arguments, only: webkit moz ms official)
+
+/*
+ * Opacity with conditional IE support.
+ */
+
+opacity(n, args...)
+  opacity: n args
+  if support-for-ie
+    val = round(n * 100)
+    if val == 100
+      -ms-filter: none
+      filter: none
+    else
+      -ms-filter: '"progid:DXImageTransform.Microsoft.Alpha(Opacity=%s)"' % val args
+      filter: 'alpha(opacity=%s)' % val args
+
+/*
+ * Vendor "text-size-adjust"
+ */
+
+text-size-adjust()
+  vendor('text-size-adjust', arguments)
+
+/*
+ * Alias the "white-space" property.
+ */
+
+whitespace()
+  white-space: arguments
+
+/*
+ * Vendor "box-sizing" support.
+ */
+
+box-sizing()
+  vendor('box-sizing', arguments, only: webkit moz official)
+
+/*
+ * Vendor "box-orient" support.
+ */
+
+box-orient()
+  vendor('box-orient', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "box-flex" support.
+ */
+
+box-flex()
+  vendor('box-flex', arguments, only: webkit moz o ms official)
+
+/*
+ * Vendor "box-flex-group" support.
+ */
+
+box-flex-group()
+  vendor('box-flex-group', arguments, only: webkit moz official)
+
+/*
+ * Vendor "box-ordinal-group" support.
+ */
+
+box-ordinal-group()
+  vendor('box-ordinal-group', arguments, only: webkit moz ms official)
+
+
+/*
+ * Vendor "box-align" support.
+ */
+
+box-align()
+  vendor('box-align', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "box-pack" support.
+ */
+
+box-pack()
+  vendor('box-pack', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "box-direction" support.
+ */
+
+box-direction()
+  vendor('box-direction', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "animation" support.
+ */
+
+animation()
+  vendor('animation', arguments)
+
+
+/*
+ * Vendor "animation-name" support.
+ */
+
+animation-name()
+  vendor('animation-name', arguments)
+
+/*
+ * Vendor "animation-duration" support.
+ */
+
+animation-duration()
+  vendor('animation-duration', arguments)
+
+/*
+ * Vendor "animation-delay" support.
+ */
+
+animation-delay()
+  vendor('animation-delay', arguments)
+
+/*
+ * Vendor "animation-direction" support.
+ */
+
+animation-direction()
+  vendor('animation-direction', arguments)
+
+/*
+ * Vendor "animation-iteration-count" support.
+ */
+
+animation-iteration-count()
+  vendor('animation-iteration-count', arguments)
+
+/*
+ * Vendor "animation-timing-function" support.
+ */
+
+animation-timing-function()
+  vendor('animation-timing-function', arguments)
+
+/*
+ * Vendor "animation-play-state" support.
+ */
+
+animation-play-state()
+  vendor('animation-play-state', arguments)
+
+/*
+ * Vendor "animation-fill-mode" support.
+ */
+
+animation-fill-mode()
+  vendor('animation-fill-mode', arguments)
+
+/*
+ * Vendor "hyphens" support.
+ */
+
+hyphens()
+  vendor('hyphens', arguments, only: webkit moz ms official)
+
+/*
+ * Vendor "appearance" support.
+ */
+
+appearance()
+  vendor('appearance', arguments, only: webkit moz official)
+
+/*
+ * Vendor "tab-size" support.
+ */
+
+tab-size()
+  vendor('tab-size', arguments, only: moz o official)
+
+/*
+ * Vendor "overflow-scrolling" support.
+ */
+
+overflow-scrolling()
+  vendor('overflow-scrolling', arguments, only: webkit official)
+
+/*
+ * Vendor "text-overflow" support, , -o- for opera 9.* - 10.*
+ */
+
+text-overflow()
+  vendor('text-overflow', arguments, only: official o)
+
+/*
+ * Vendor "text-size-adjust" support.
+ */
+text-size-adjust()
+  vendor('text-size-adjust', arguments, only: official webkit ms)
+
+/*
+ * Vendor "font-smoothing" support, webkit only.
+ */
+font-smoothing()
+  vendor('font-smoothing', arguments, only: webkit)
+
+/*
+ * Helper for border-radius().
+ */
+
+-apply-border-radius(pos, importance)
+  if length(pos) == 3
+    // border-radius: <top | buttom> <left | right> <n>
+    y = pos[0]
+    x = pos[1]
+    // We don't use moz for simple boder-radius anymore
+    // vendor('border-radius-%s%s' % pos, pos[2], only: moz)
+    vendor('border-%s-%s-radius' % pos, pos[2] importance, only: webkit official)
+  else if pos[0] in (top bottom)
+    // border-radius: <top | bottom> <n>
+    -apply-border-radius(pos[0] left pos[1], importance)
+    -apply-border-radius(pos[0] right pos[1], importance)
+  else if pos[0] in (left right)
+    // border-radius: <left | right> <n>
+    unshift(pos, top);
+    -apply-border-radius(pos, importance)
+    pos[0] = bottom
+    -apply-border-radius(pos, importance)
+
+/*
+ * border-radius supporting vendor prefixes and
+ * augmented behavior.
+ *
+ * Examples:
+ *
+ *    border-radius: 2px 5px
+ *    border-radius: top 5px bottom 10px
+ *    border-radius: left 5px
+ *    border-radius: top left 5px
+ *    border-radius: top left 10px bottom right 5px
+ *    border-radius: top left 10px, bottom right 5px
+ *
+ */
+
+border-radius()
+  pos = ()
+  augmented = false
+  importance = arguments[length(arguments) - 1] == !important ? !important : unquote('')
+
+  for args in arguments
+    for arg in args
+      if arg is a 'ident'
+        append(pos, arg)
+        augmented = true
+      else
+        append(pos, arg)
+        if augmented
+          -apply-border-radius(pos, importance)
+          pos = ()
+  vendor('border-radius', pos, only: webkit official) unless augmented
+
+/**
+ * Vendor input-placeholder/placeholder support.
+ *
+ * Examples:
+ *    // Default syntax
+ *    body
+ *      placeholder(color #333, font-weight normal)
+ *
+ *    // The comma is important
+ *    .placeholder-red
+ *      placeholder(color red,)
+ *    
+ *    // We can pass a function
+ *    green-placeholder()
+ *      color green
+ *    .placeholder-green
+ *      placeholder(green-placeholder)
+ *    
+ *    // We can pass a hash
+ *    textarea
+ *      placeholder((font-style italic) (font-weight bold) (padding '4px 10px'))
+ */
+placeholder()
+  for v in ':-webkit-input' '-moz' ':-moz' '-ms-input'
+    &:{v}-placeholder
+      for pair in arguments
+        if typeof(pair) == 'function'
+          pair()
+        else if pair is not null && pair[0] is not null
+          {pair[0]}: type(pair[1]) == 'string' ? s(pair[1]) : pair[1]
+input-placeholder = placeholder
+
+/*Image Replacement*/
+ir()
+  text-indent -99999px
+  display     block
