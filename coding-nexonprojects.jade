@@ -1,0 +1,17 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="coding-nexon.net.html", title="See Previous Project") &larr;
+    a#next-project(href="coding-jclaw.html", title="See Next Project") &rarr;
+  article
+    h1 Nexon Projects
+    p Whether it is a CMS-driven post page, content update teaser pages, a full site build, marketing campaign or
+      |lightbox special events, I've worked in every facet of the web world at Nexon America. What started as Flash-heavy,
+      |table-centered websites have turned into HTML5 experience for our users. I created naming conventions for use across
+      |our entire portfolio, from image names to CSS style rules, and guidelines for efficient development and deployment.
+    a.visit(href="https://github.com/cyborgspider/nexon") Download Files
+
+  #project-content
+    -for(var i= 1;i<=5;i++)
+      img(src="img/coding/nexonprojects-"+i+".jpg", alt="")

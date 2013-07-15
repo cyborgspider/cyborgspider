@@ -1,0 +1,16 @@
+mixin image-list
+  img(src="img/coding/nexonprojects-1.jpg", alt="")
+  img(src="img/coding/nexonprojects-2.jpg", alt="")
+  img(src="img/coding/nexonprojects-3.jpg", alt="")
+  img(src="img/coding/nexonprojects-4.jpg", alt="")
+  img(src="img/coding/nexonprojects-5.jpg", alt="")
+
+!!!5
+html
+  include includes/head
+  body
+    #wrap
+      include includes/header
+      #content
+        block content
+    script(src="http://code.jquery.com/jquery-2.0.0.min.js")

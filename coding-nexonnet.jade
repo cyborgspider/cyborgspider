@@ -1,0 +1,17 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="coding-nexon.net.html", title="See Previous Project") &larr;
+    a#next-project(href="coding-jclaw.html", title="See Next Project") &rarr;
+  article
+    h1 Nexon.net
+    p I handled front-end developer duties on nexon.net. Nexon is the industry leader in free to play massively
+      |multiplayer online games, and this portal site enables users to sign up, manage their account, and charge
+      |virtual currency. This sit is built using the Jade templating engine, LESS for stylesheets, and a custom
+      |NodeJS build-script to put it all together.
+    a.visit(href="http://www.nexon.net") Visit Site
+
+  #project-content
+    -for(var i= 1;i<=3;i++)
+      img(src="img/coding/nexonnet-"+i+".jpg", alt="")
