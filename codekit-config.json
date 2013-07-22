@@ -31,6 +31,15 @@
       "outputAbbreviatedPath" : "\/scripts\/build\/js\/onload.min.js",
       "fileType" : 64
     },
+    "\/build\/css\/styles.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/css\/styles.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/styles\/isotope.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -42,15 +51,6 @@
       "outputAbbreviatedPath" : "\/styles\/build\/css\/isotope.css",
       "fileType" : 8,
       "debugStyle" : 0
-    },
-    "\/build\/css\/styles.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/css\/styles.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/culture-sports.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -85,6 +85,17 @@
       "outputAbbreviatedPath" : "\/build\/graphics-illustration.html",
       "fileType" : 512
     },
+    "\/includes\/header.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/includes\/header.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/includes\/build\/header.html",
+      "fileType" : 512
+    },
     "\/coding-shift.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -107,17 +118,6 @@
       "outputAbbreviatedPath" : "\/styles\/build\/css\/styles.css",
       "fileType" : 8,
       "debugStyle" : 0
-    },
-    "\/includes\/header.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/includes\/header.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/includes\/build\/header.html",
-      "fileType" : 512
     },
     "\/build\/culture-teamworkshop.html" : {
       "ignoreWasSetByUser" : 0,
@@ -228,17 +228,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/coding-freelance.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coding-freelance.jade",
-      "outputStyle" : 1,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/build\/coding-freelance.html",
-      "fileType" : 512
-    },
     "\/styles\/projects.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -268,6 +257,17 @@
       "inputAbbreviatedPath" : "\/build\/graphics-illustration.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/coding-freelance.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/coding-freelance.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/coding-freelance.html",
+      "fileType" : 512
     },
     "\/culture-htmlworkshop.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -300,6 +300,17 @@
       "outputStyle" : 0,
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/build\/coding-nexonnet.html",
+      "fileType" : 512
+    },
+    "\/about-me.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/about-me.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/about-me.html",
       "fileType" : 512
     },
     "\/includes\/head.jade" : {
