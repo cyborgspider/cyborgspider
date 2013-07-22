@@ -349,7 +349,8 @@ nav a.active {
 #illustration,
 #teamworkshop,
 #htmlworkshop,
-#sports {
+#sports,
+#shift {
   background: url("../img/work-list.jpg") no-repeat;
 }
 #nexonnet {
@@ -381,6 +382,9 @@ nav a.active {
 }
 #sports {
   background-position: 0 -1980px;
+}
+#shift {
+  background-position: 0 -2200px;
 }
 .isotope-item {
   z-index: 2;
