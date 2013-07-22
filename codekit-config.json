@@ -20,26 +20,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/scripts\/onload.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/scripts\/onload.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/scripts\/build\/js\/onload.min.js",
-      "fileType" : 64
-    },
-    "\/build\/css\/styles.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/css\/styles.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/styles\/isotope.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -52,16 +32,14 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/culture-sports.jade" : {
+    "\/build\/css\/styles.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/culture-sports.jade",
-      "outputStyle" : 1,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/build\/culture-sports.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/build\/css\/styles.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/coding-nexonprojects.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -72,6 +50,17 @@
       "outputStyle" : 0,
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/build\/coding-nexonprojects.html",
+      "fileType" : 512
+    },
+    "\/culture-sports.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/culture-sports.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/culture-sports.html",
       "fileType" : 512
     },
     "\/graphics-illustration.jade" : {
@@ -96,17 +85,6 @@
       "outputAbbreviatedPath" : "\/includes\/build\/header.html",
       "fileType" : 512
     },
-    "\/coding-shift.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coding-shift.jade",
-      "outputStyle" : 1,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/build\/coding-shift.html",
-      "fileType" : 512
-    },
     "\/styles\/styles.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -118,6 +96,17 @@
       "outputAbbreviatedPath" : "\/styles\/build\/css\/styles.css",
       "fileType" : 8,
       "debugStyle" : 0
+    },
+    "\/coding-shift.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/coding-shift.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/coding-shift.html",
+      "fileType" : 512
     },
     "\/build\/culture-teamworkshop.html" : {
       "ignoreWasSetByUser" : 0,
@@ -160,15 +149,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/build\/culture-htmlworkshop.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/culture-htmlworkshop.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/styles\/_variables.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -180,6 +160,38 @@
       "outputAbbreviatedPath" : "\/styles\/build\/css\/_variables.css",
       "fileType" : 8,
       "debugStyle" : 0
+    },
+    "\/build\/culture-htmlworkshop.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/culture-htmlworkshop.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/scripts\/scripts.coffee" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/scripts\/scripts.coffee",
+      "checkOutputStyle" : 0,
+      "minifyOutput" : 1,
+      "outputAbbreviatedPath" : "\/build\/js\/scripts.js",
+      "outputStyle" : 0,
+      "fileType" : 32
+    },
+    "\/build\/js\/scripts.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/js\/scripts.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/build\/js\/build\/js\/scripts.min.js",
+      "fileType" : 64
     },
     "\/build\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -219,15 +231,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/styles\/build\/css\/styles.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/build\/css\/styles.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/styles\/projects.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -239,6 +242,17 @@
       "outputAbbreviatedPath" : "\/styles\/build\/css\/projects.css",
       "fileType" : 8,
       "debugStyle" : 0
+    },
+    "\/coding-freelance.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/coding-freelance.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/coding-freelance.html",
+      "fileType" : 512
     },
     "\/build\/coding-nexonnet.html" : {
       "ignoreWasSetByUser" : 0,
@@ -258,16 +272,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/coding-freelance.jade" : {
+    "\/styles\/build\/css\/styles.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/coding-freelance.jade",
-      "outputStyle" : 1,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/build\/coding-freelance.html",
-      "fileType" : 512
+      "inputAbbreviatedPath" : "\/styles\/build\/css\/styles.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/culture-htmlworkshop.jade" : {
       "ignoreWasSetByUser" : 0,
@@ -301,6 +313,15 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/build\/coding-nexonnet.html",
       "fileType" : 512
+    },
+    "\/build\/about-me.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/about-me.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/about-me.jade" : {
       "ignoreWasSetByUser" : 0,
