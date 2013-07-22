@@ -1,0 +1,16 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="culture-teamworkshop.html", title="See Previous Project") &larr;
+    a#next-project(href="coding-shift.html", title="See Next Project") &rarr;
+  article
+    h1 Company Sports
+    p For the past three years, I've organized intramural company sporting events. Sometimes we have awesome prizes, sometimes we do it for
+      |the love of the sport. Basketball, table tennis, foosball; you get to see who's REALLY competitive among your peers! Whether it be setting
+      |the teams and schedules, creating team logos, getting the word out through email or CEO presentations, the only thing that I enjoy doing more
+      |than playing is setting the whole thing up!
+
+  #project-content
+    -for(var i= 1;i<=5;i++)
+      img(src="img/culture/sports-"+i+".jpg", alt="")

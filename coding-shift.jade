@@ -1,0 +1,17 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="culture-sports.html", title="See Previous Project") &larr;
+    a#next-project(href="coding-nexonnet.html", title="See Next Project") &rarr;
+  article
+    h1 SHIFT
+    p SHIFT is the real-time marketing platform for brands and agencies, enabling marketers to collaborate
+      | and manage their social media campaigns. I worked on the HTML and CSS for the platform
+      | and the Media Manager social advertising app, using the latest CSS3 technologies and techniques to create an exciting,
+      | robust experience for one of the most up and coming start-ups in the United States today.
+    a.visit(href="http://www.shift.com") Visit Site
+
+  #project-content
+    -for(var i= 1;i<=4;i++)
+      img(src="img/coding/shift-"+i+".jpg", alt="")

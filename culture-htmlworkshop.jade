@@ -1,0 +1,18 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="graphics-voting.html", title="See Previous Project") &larr;
+    a#next-project(href="culture-teamworkshop.html", title="See Next Project") &rarr;
+  article
+    h1 HTML/CSS/JS Workshop
+    p I love teaching and mentoring others, and this workshop was an opportunity to enrich the skillsets of several peers.
+      |Broken up into three parts (HTML, CSS, and jQuery), this workshop was geared to people new to coding and who wished to
+      |add value to the company by expanding their knowledge. I had example files and simple to follow instructions so that
+      |people can learn on at their pace, and to inspire them to learn more. I look forward to holding more workshops (with different or advanced topics) in the future!
+
+    a.visit(href="downloads/html.zip") Download Presentation
+
+  #project-content
+    -for(var i= 1;i<=5;i++)
+      img(src="img/culture/htmlworkshop-"+i+".jpg", alt="")

@@ -1,0 +1,15 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="graphics-nf2.html", title="See Previous Project") &larr;
+    a#next-project(href="graphics-photography.html", title="See Next Project") &rarr;
+  article
+    h1 Illustrations
+    p Sometimes one needs to get away from lines of code or step away from the conventional and just plain draw. I love the ease and fluidity of
+      |my Wacom tablet, and the ability to create colorful, captivating design and artwork. From corporate logos to overly cutesy doodles or grungy
+      |distressed style, the only limit is my imagination!
+
+  #project-content
+    -for(var i= 1;i<=8;i++)
+      img(src="img/graphics/illustration-"+i+".jpg", alt="")

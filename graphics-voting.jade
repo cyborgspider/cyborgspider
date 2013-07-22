@@ -1,0 +1,16 @@
+extends subpage-template
+
+block content
+  #project-nav
+    a#prev-project(href="graphics-photography.html", title="See Previous Project") &larr;
+    a#next-project(href="#culture-htmlworkshop.html", title="See Next Project") &rarr;
+  article
+    h1 Voting Workshop &amp; Brochure
+    p I was approached by a colleague to help her create a presentation for the office, imploring people to vote. What started as
+      |a ho-hum powerpoint turned into a full scale presentation, complete with a take home brochure, snacks &amp; refreshements, and a fog machine
+      |(scratch that, no budget for the fog machine).
+    p I lead and scoped the project, and created the graphics and copy for the presentation and brochure. Needless to say, I voted in 2012, and
+      |I certainly hope I persuaded several of my coworkers to do the same!
+  #project-content
+    -for(var i= 1;i<=5;i++)
+      img(src="img/graphics/voting-"+i+".jpg", alt="")
