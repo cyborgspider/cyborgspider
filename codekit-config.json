@@ -34,7 +34,7 @@
     },
     "\/build\/css\/styles.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/css\/styles.css",
@@ -89,11 +89,11 @@
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
+      "outputPathIsSetByUser" : 1,
       "inputAbbreviatedPath" : "\/styles\/styles.styl",
       "outputStyle" : 1,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/styles\/build\/css\/styles.css",
+      "outputAbbreviatedPath" : "\/build\/css\/styles.css",
       "fileType" : 8,
       "debugStyle" : 0
     },
@@ -140,15 +140,6 @@
       "outputAbbreviatedPath" : "\/build\/culture-teamworkshop.html",
       "fileType" : 512
     },
-    "\/build\/coding-nexonprojects.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/coding-nexonprojects.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/build\/culture-htmlworkshop.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -169,6 +160,15 @@
       "outputAbbreviatedPath" : "\/styles\/build\/css\/_variables.css",
       "fileType" : 8,
       "debugStyle" : 0
+    },
+    "\/build\/coding-nexonprojects.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/coding-nexonprojects.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/scripts\/scripts.coffee" : {
       "ignoreWasSetByUser" : 0,
@@ -253,15 +253,6 @@
       "outputAbbreviatedPath" : "\/build\/coding-freelance.html",
       "fileType" : 512
     },
-    "\/styles\/build\/css\/styles.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/styles\/build\/css\/styles.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/styles\/projects.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -314,15 +305,6 @@
       "outputAbbreviatedPath" : "\/build\/graphics-voting.html",
       "fileType" : 512
     },
-    "\/build\/about-me.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/about-me.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/coding-nexonnet.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -340,6 +322,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/404.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/build\/about-me.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/about-me.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -420,15 +411,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/build\/graphics-voting.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/graphics-voting.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/graphics-photography.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -439,6 +421,15 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/build\/graphics-photography.html",
       "fileType" : 512
+    },
+    "\/build\/graphics-voting.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/graphics-voting.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     }
   },
   "manualImportLinks" : [
