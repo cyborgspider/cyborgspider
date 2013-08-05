@@ -2,11 +2,11 @@ extends subpage-template
 block document-title
   title Nexon.net
 block content
-  #project-nav
-    a#prev-project(href="coding-shift", title="See Previous Project") &larr;
-    a#next-project(href="coding-nexonprojects", title="See Next Project") &rarr;
   article
     h1 Nexon.net
+    #project-nav
+      a#prev-project(href="coding-shift", title="See Previous Project") Previous Project
+      a#next-project(href="coding-nexonprojects", title="See Next Project") Next Project    
     p I handled front-end developer duties on nexon.net. Nexon is the industry leader in free to play massively
       |multiplayer online games, and this portal site enables users to sign up, manage their account, and charge
       |virtual currency. This sit is built using the Jade templating engine, LESS for stylesheets, and a custom
