@@ -6,11 +6,12 @@ block content
     h1 Illustrations
     #project-nav
       a#prev-project(href="graphics-nf2", title="See Previous Project") Previous Project
-      a#next-project(href="graphics-photography", title="See Next Project") Next Project    
+      a#next-project(href="graphics-photography", title="See Next Project") Next Project
     p Sometimes one needs to get away from lines of code or step away from the conventional and just plain draw. I love the ease and fluidity of
       |my Wacom tablet, and the ability to create colorful, captivating design and artwork. From corporate logos to overly cutesy doodles or grungy
       |distressed style, the only limit is my imagination!
 
   #project-content
     -for(var i= 1;i<=8;i++)
-      img(src="img/graphics/illustration-"+i+".jpg", alt="")
+      .img-wrap
+        img(src="img/graphics/illustration-"+i+".jpg", alt="",width="600",height="400")

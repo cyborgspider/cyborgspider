@@ -6,7 +6,7 @@ block content
     h1 Voting Workshop &amp; Brochure
     #project-nav
       a#prev-project(href="graphics-photography", title="See Previous Project") Previous Project
-      a#next-project(href="culture-htmlworkshop", title="See Next Project") Next Project    
+      a#next-project(href="culture-htmlworkshop", title="See Next Project") Next Project
     p I was approached by a colleague to help her create a presentation for the office, imploring people to vote. What started as
       |a ho-hum powerpoint turned into a full scale presentation, complete with a take home brochure, snacks &amp; refreshements, and a fog machine
       |(scratch that, no budget for the fog machine).
@@ -14,4 +14,5 @@ block content
       |I certainly hope I persuaded several of my coworkers to do the same!
   #project-content
     -for(var i= 1;i<=5;i++)
-      img(src="img/graphics/voting-"+i+".jpg", alt="")
+      .img-wrap
+        img(src="img/graphics/voting-"+i+".jpg", alt="",width="600",height="400")

@@ -6,7 +6,7 @@ block content
     h1 Team Workshop
     #project-nav
       a#prev-project(href="culture-htmlworkshop", title="See Previous Project") Previous Project
-      a#next-project(href="culture-sports", title="See Next Project") Next Project    
+      a#next-project(href="culture-sports", title="See Next Project") Next Project
     p Always seeking to inspire and to be inspired by others, I ran a creative workshop at work amongst my design colleagues.
       |We brainstormed self-branding and personal logos/identities. After answering some questions about our goals and strengths,
       |people sketched out some ideas, and then we switched the answers among our peers, and had them create one for us! I enjoy facilitating
@@ -14,4 +14,5 @@ block content
 
   #project-content
     -for(var i= 1;i<=5;i++)
-      img(src="img/culture/teamworkshop-"+i+".jpg", alt="")
+      .img-wrap
+        img(src="img/culture/teamworkshop-"+i+".jpg", alt="",width="600",height="400")

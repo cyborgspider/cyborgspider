@@ -6,9 +6,10 @@ block content
     h1 Photography
     #project-nav
       a#prev-project(href="graphics-illustration", title="See Previous Project") Previous Project
-      a#next-project(href="graphics-voting", title="See Next Project") Next Project    
+      a#next-project(href="graphics-voting", title="See Next Project") Next Project
     p Armed with my Sony a300 or smart-phone camera, you never know when a good shot is aching to be taken. I enjoy taking
       |pictures of street art, architecture, and nature, but hope to branch out to portraits and sports photography someday!
   #project-content
     -for(var i= 1;i<=7;i++)
-      img(src="img/graphics/photo-"+i+".jpg", alt="")
+      .img-wrap
+        img(src="img/graphics/photo-"+i+".jpg", alt="",width="600",height="400")

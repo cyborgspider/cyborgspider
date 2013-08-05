@@ -6,7 +6,7 @@ block content
     h1 SHIFT
     #project-nav
       a#prev-project(href="culture-sports", title="See Previous Project") Previous Project
-      a#next-project(href="coding-nexonnet", title="See Next Project") Next Project    
+      a#next-project(href="coding-nexonnet", title="See Next Project") Next Project
     p SHIFT is the real-time marketing platform for brands and agencies, enabling marketers to collaborate
       | and manage their social media campaigns. I worked on the HTML and CSS for the platform
       | and the Media Manager social advertising app, using the latest CSS3 technologies and techniques to create an exciting,
@@ -15,4 +15,5 @@ block content
 
   #project-content
     -for(var i= 1;i<=4;i++)
-      img(src="img/coding/shift-"+i+".jpg", alt="")
+      .img-wrap
+        img(src="img/coding/shift-"+i+".jpg", alt="",width="600",height="400")
