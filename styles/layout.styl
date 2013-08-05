@@ -10,7 +10,9 @@ body
 
 a
   text-decoration none
-  color $black
+  color #fff
+  &:hover
+    $black
 h1
   font-family 'Ubuntu'
 
@@ -20,6 +22,14 @@ p
 
 .dn
   display none
+.left
+  float left
+.right
+  float right
+
+img.left
+  margin-right  20px
+  margin-bottom 10px
 
 #wrap
   padding 0 80px
@@ -47,7 +57,7 @@ p
   text-transform uppercase
   height         70px
   width          100%
-  background     $nav-blue
+  background     $blue-nav
   position       fixed
   z-index        3
   left           0
@@ -58,27 +68,21 @@ p
 nav
   padding 0 80px
   a
-    color        $black
     text-align   left
     float        left
     margin-right 30px
     font-size    18px
-    &:hover
     &.active
-      color #fff
-
+      color  $black
 
 #project-nav
-  margin-top 8px
-  float    right
+  margin-top    8px
+  margin-bottom 10px
+  float         right
 #prev-project
 #next-project
-  padding 3px 10px
-  background $blue
-  text-align center
-  color #fff
-  &:hover
-    background #56666c
+  myButton()
+  display inline-block
 #prev-project
   margin-right 5px
 
@@ -107,21 +111,9 @@ nav
     clear      both
 
 .visit
-  padding    3px 10px
-  background $blue
-  text-align center
-  color      #fff
+  myButton()
   margin     0 auto 20px
-  display    table
-  &:hover
-    background #56666c
 
 #top
-  padding    3px 10px
-  background $blue
-  text-align center
-  color      #fff
+  myButton()
   margin     30px auto 0
-  display    table
-  &:hover
-    background #56666c
