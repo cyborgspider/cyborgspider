@@ -24,7 +24,6 @@ p
   clear    both
   position relative
   padding  30px 90px
-  float    left
   article
     width        280px
     margin-right 80px
@@ -34,53 +33,50 @@ p
       margin-bottom 17px
       line-height   36px
 
-header
-  position relative
-  #logo
-    width       105px
-    height      100px
-    background  url(../img/logo.png) no-repeat
-    ir()
-    float       left
+#logo
+  width       68px
+  height      65px
+  background  url(../img/logo.png) no-repeat
+  ir()
+  float        left
+  margin-right 30px
+  margin-top   2px
 #nav-wrap
   text-transform uppercase
-  height         50px
+  height         70px
   width          100%
-  background     $black
+  background     $nav-blue
   position       fixed
   z-index        3
   left           0
   top            0
+  line-height    70px
+  box-shadow     0 1px 0 0 rgba(0,0,0,0.2)
+
 nav
-  width 960px
-  margin 0 auto
+  padding 0 80px
   a
-    color        #666
+    color        $black
     text-align   left
     float        left
-    margin-right 10px
-    padding      3px 10px
-    font-size    24px
-    width        20%
+    margin-right 30px
+    font-size    18px
     &:hover
     &.active
-      color #4d93b1
+      color #fff
 
 .home
   #wrap
     padding 0 80px
-  header
-    #logo
-      margin 20px 0 0 20px
   h2
     font-size   52px
     line-height 60px
-    margin      0 0 0 20px
     padding     20px 0
     float       left
     clear       both
   #content
-    padding 0
+    padding  80px 0 40px
+    overflow hidden
 
 #filter-nav
   clear both
@@ -133,7 +129,7 @@ nav
 
 .description
   color      #fff
-  background #000
+  background $black
   background rgba(0,0,0,0.8)
   z-index    1
   position   absolute
@@ -201,7 +197,7 @@ nav
 
 .visit
   padding 3px 10px
-  background #4d93b1
+  background $blue
   text-align center
   color #fff
   &:hover
@@ -212,6 +208,6 @@ nav
   z-index          3000
   color            #fff
   font-size        12px
-  background-color #000
+  background-color $black
   padding          0 3px
 
