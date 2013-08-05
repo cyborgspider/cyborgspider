@@ -27,8 +27,10 @@ nav a:hover,nav a.active{color:#fff}
 #content.about img{float:right;border:solid 1px #2b3336;margin:0 0 10px 20px}
 #content.about .visit{display:block;float:left;width:70px;margin-right:10px}
 #content.about #back-to-list{text-align:left;float:left;clear:both}
-.visit{padding:3px 10px;background:#4d93b1;text-align:center;color:#fff;margin-bottom:10px;display:inline-block;}
+.visit{padding:3px 10px;background:#4d93b1;text-align:center;color:#fff;margin:0 auto 20px;display:table;}
 .visit:hover{background:#56666c}
+#top{padding:3px 10px;background:#4d93b1;text-align:center;color:#fff;margin:30px auto 0;display:table;}
+#top:hover{background:#56666c}
 .home h2{font-size:52px;line-height:60px;padding:20px 0;float:left;clear:both}
 .home #content{padding:80px 0 40px}
 #filter-nav{clear:both;width:300px;margin:0 auto;}
