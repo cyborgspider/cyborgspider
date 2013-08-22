@@ -1,6 +1,6 @@
 {
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
-  "creatorBuild" : "8317",
+  "creatorBuild" : "8300",
   "files" : {
     "\/build\/img\/coding\/spot-4.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -8,20 +8,9 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/spot-4.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/spot-4.jpg",
       "initialSize" : 111786,
-      "fileType" : 4096
-    },
-    "\/build\/img\/culture\/htmlworkshop-5.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-5.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-5.jpg",
-      "initialSize" : 17597,
       "fileType" : 4096
     },
     "\/build\/img\/culture\/teamworkshop-1.jpg" : {
@@ -30,9 +19,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-1.jpg",
       "initialSize" : 40523,
+      "fileType" : 4096
+    },
+    "\/build\/img\/culture\/htmlworkshop-5.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-5.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-5.jpg",
+      "initialSize" : 17597,
       "fileType" : 4096
     },
     "\/graphics-nf2.jade" : {
@@ -63,20 +63,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-1.jpg",
       "initialSize" : 24015,
       "fileType" : 4096
     },
-    "\/build\/img\/culture\/sports-4.jpg" : {
+    "\/build\/img\/graphics\/voting-1.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/culture\/sports-4.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/culture\/sports-4.jpg",
-      "initialSize" : 41361,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-1.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-1.jpg",
+      "initialSize" : 50400,
       "fileType" : 4096
     },
     "\/build\/img\/culture\/teamworkshop-3.jpg" : {
@@ -85,7 +85,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-3.jpg",
       "initialSize" : 29680,
       "fileType" : 4096
@@ -96,21 +96,83 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-1.jpg",
       "initialSize" : 73883,
       "fileType" : 4096
     },
-    "\/build\/img\/graphics\/voting-1.jpg" : {
+    "\/includes\/header.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/includes\/header.jade",
+      "outputStyle" : 0,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/includes\/build\/header.html",
+      "fileType" : 512
+    },
+    "\/build\/img\/graphics\/nf2-3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-1.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-1.jpg",
-      "initialSize" : 50400,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-3.jpg",
+      "initialSize" : 35937,
       "fileType" : 4096
+    },
+    "\/build\/graphics-illustration.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/graphics-illustration.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
+    },
+    "\/graphics-illustration.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/graphics-illustration.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/graphics-illustration.html",
+      "fileType" : 512
+    },
+    "\/build\/img\/coding\/shift-1.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/coding\/shift-1.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/coding\/shift-1.jpg",
+      "initialSize" : 48421,
+      "fileType" : 4096
+    },
+    "\/build\/img\/coding\/spot-1.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/coding\/spot-1.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/coding\/spot-1.jpg",
+      "initialSize" : 45222,
+      "fileType" : 4096
+    },
+    "\/build\/graphics-photography.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/graphics-photography.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
     },
     "\/styles\/_variables.styl" : {
       "ignoreWasSetByUser" : 0,
@@ -124,57 +186,6 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/build\/graphics-illustration.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/graphics-illustration.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/build\/img\/coding\/spot-1.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/coding\/spot-1.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/coding\/spot-1.jpg",
-      "initialSize" : 45222,
-      "fileType" : 4096
-    },
-    "\/graphics-illustration.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/graphics-illustration.jade",
-      "outputStyle" : 1,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/build\/graphics-illustration.html",
-      "fileType" : 512
-    },
-    "\/build\/img\/graphics\/nf2-3.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-3.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-3.jpg",
-      "initialSize" : 35937,
-      "fileType" : 4096
-    },
-    "\/build\/graphics-photography.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/graphics-photography.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/styles\/projects.styl" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -187,24 +198,13 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/includes\/header.jade" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/includes\/header.jade",
-      "outputStyle" : 0,
-      "compileDebug" : 1,
-      "outputAbbreviatedPath" : "\/includes\/build\/header.html",
-      "fileType" : 512
-    },
     "\/build\/img\/culture\/teamworkshop-5.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-5.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-5.jpg",
       "initialSize" : 38503,
       "fileType" : 4096
@@ -215,7 +215,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-3.jpg",
       "initialSize" : 84800,
       "fileType" : 4096
@@ -231,13 +231,24 @@
       "outputAbbreviatedPath" : "\/build\/coding-freelance.html",
       "fileType" : 512
     },
+    "\/build\/img\/culture\/sports-4.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/culture\/sports-4.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/culture\/sports-4.jpg",
+      "initialSize" : 41361,
+      "fileType" : 4096
+    },
     "\/build\/img\/graphics\/photo-3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-3.jpg",
       "initialSize" : 57879,
       "fileType" : 4096
@@ -265,14 +276,16 @@
       "outputAbbreviatedPath" : "\/build\/coding-nexonprojects.html",
       "fileType" : 512
     },
-    "\/build\/coding-nexonprojects.html" : {
+    "\/build\/img\/graphics\/box-5.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/coding-nexonprojects.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/box-5.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/box-5.jpg",
+      "initialSize" : 26827,
+      "fileType" : 4096
     },
     "\/build\/img\/coding\/nexonprojects-5.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -280,10 +293,28 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-5.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-5.jpg",
       "initialSize" : 70184,
       "fileType" : 4096
+    },
+    "\/build\/coding-nexonprojects.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/coding-nexonprojects.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
+    },
+    "\/build\/graphics-papercraft.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/graphics-papercraft.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/build\/img\/logo.png" : {
       "ignoreWasSetByUser" : 0,
@@ -302,7 +333,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/jclaw-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/jclaw-1.jpg",
       "initialSize" : 50494,
       "fileType" : 4096
@@ -313,10 +344,30 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/sports-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/sports-2.jpg",
       "initialSize" : 40145,
       "fileType" : 4096
+    },
+    "\/build\/img\/graphics\/voting-5.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-5.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-5.jpg",
+      "initialSize" : 96036,
+      "fileType" : 4096
+    },
+    "\/build\/css\/styles.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/css\/styles.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
     },
     "\/styles\/layout.styl" : {
       "ignoreWasSetByUser" : 0,
@@ -330,33 +381,13 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/build\/css\/styles.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/css\/styles.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/build\/img\/graphics\/voting-5.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-5.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-5.jpg",
-      "initialSize" : 96036,
-      "fileType" : 4096
-    },
     "\/build\/img\/graphics\/illustration-8.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-8.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-8.jpg",
       "initialSize" : 41653,
       "fileType" : 4096
@@ -367,7 +398,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-4.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-4.jpg",
       "initialSize" : 52172,
       "fileType" : 4096
@@ -378,7 +409,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/jclaw-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/jclaw-2.jpg",
       "initialSize" : 54732,
       "fileType" : 4096
@@ -401,9 +432,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-1.jpg",
       "initialSize" : 52256,
+      "fileType" : 4096
+    },
+    "\/build\/img\/graphics\/box-1.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/box-1.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/box-1.jpg",
+      "initialSize" : 26882,
       "fileType" : 4096
     },
     "\/build\/img\/graphics\/photo-6.jpg" : {
@@ -412,7 +454,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-6.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-6.jpg",
       "initialSize" : 30252,
       "fileType" : 4096
@@ -423,7 +465,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/about-me.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/about-me.jade" : {
@@ -435,6 +477,17 @@
       "outputStyle" : 1,
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/build\/about-me.html",
+      "fileType" : 512
+    },
+    "\/graphics-papercraft.jade" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/graphics-papercraft.jade",
+      "outputStyle" : 1,
+      "compileDebug" : 1,
+      "outputAbbreviatedPath" : "\/build\/graphics-papercraft.html",
       "fileType" : 512
     },
     "\/scripts\/build\/js\/scripts.min.js" : {
@@ -465,7 +518,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/spot-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/spot-2.jpg",
       "initialSize" : 98673,
       "fileType" : 4096
@@ -476,7 +529,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-7.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-7.jpg",
       "initialSize" : 27341,
       "fileType" : 4096
@@ -487,7 +540,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/sports-5.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/sports-5.jpg",
       "initialSize" : 39473,
       "fileType" : 4096
@@ -498,9 +551,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-2.jpg",
       "initialSize" : 32127,
+      "fileType" : 4096
+    },
+    "\/build\/img\/graphics\/box-6.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/box-6.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/box-6.jpg",
+      "initialSize" : 39352,
       "fileType" : 4096
     },
     "\/build\/img\/me.jpg" : {
@@ -509,7 +573,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/me.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/me.jpg",
       "initialSize" : 26445,
       "fileType" : 4096
@@ -520,8 +584,30 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/culture-teamworkshop.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
+    },
+    "\/build\/img\/graphics\/box-2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/box-2.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/box-2.jpg",
+      "initialSize" : 35014,
+      "fileType" : 4096
+    },
+    "\/build\/img\/graphics\/voting-4.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-4.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-4.jpg",
+      "initialSize" : 55569,
+      "fileType" : 4096
     },
     "\/build\/img\/coding\/nexonnet-3.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -529,7 +615,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonnet-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonnet-3.jpg",
       "initialSize" : 34191,
       "fileType" : 4096
@@ -545,28 +631,6 @@
       "outputAbbreviatedPath" : "\/build\/index.html",
       "fileType" : 512
     },
-    "\/build\/img\/graphics\/voting-4.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-4.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-4.jpg",
-      "initialSize" : 55569,
-      "fileType" : 4096
-    },
-    "\/build\/img\/culture\/htmlworkshop-4.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-4.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-4.jpg",
-      "initialSize" : 22199,
-      "fileType" : 4096
-    },
     "\/culture-htmlworkshop.jade" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -577,6 +641,17 @@
       "compileDebug" : 1,
       "outputAbbreviatedPath" : "\/build\/culture-htmlworkshop.html",
       "fileType" : 512
+    },
+    "\/build\/img\/culture\/htmlworkshop-4.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-4.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-4.jpg",
+      "initialSize" : 22199,
+      "fileType" : 4096
     },
     "\/scripts\/build\/js\/scripts.js" : {
       "ignoreWasSetByUser" : 0,
@@ -595,7 +670,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-6.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-6.jpg",
       "initialSize" : 63064,
       "fileType" : 4096
@@ -606,7 +681,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-4.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-4.jpg",
       "initialSize" : 39568,
       "fileType" : 4096
@@ -617,7 +692,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-2.jpg",
       "initialSize" : 38170,
       "fileType" : 4096
@@ -628,7 +703,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/jclaw-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/jclaw-3.jpg",
       "initialSize" : 67983,
       "fileType" : 4096
@@ -639,7 +714,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-1.jpg",
       "initialSize" : 53108,
       "fileType" : 4096
@@ -650,7 +725,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/coding-shift.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/build\/img\/culture\/sports-3.jpg" : {
@@ -659,10 +734,21 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/sports-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/sports-3.jpg",
       "initialSize" : 37485,
       "fileType" : 4096
+    },
+    "\/build\/js\/scripts.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/js\/scripts.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/build\/js\/build\/js\/scripts.min.min.js",
+      "fileType" : 64
     },
     "\/styles\/nib.styl" : {
       "ignoreWasSetByUser" : 0,
@@ -676,37 +762,26 @@
       "fileType" : 8,
       "debugStyle" : 0
     },
-    "\/build\/js\/scripts.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/js\/scripts.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/build\/js\/build\/js\/scripts.min.min.js",
-      "fileType" : 64
-    },
     "\/build\/img\/culture\/teamworkshop-4.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-4.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/teamworkshop-4.jpg",
       "initialSize" : 33098,
       "fileType" : 4096
     },
-    "\/build\/img\/coding\/nexonprojects-2.jpg" : {
+    "\/build\/img\/coding\/shift-3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-2.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-2.jpg",
-      "initialSize" : 72994,
+      "inputAbbreviatedPath" : "\/build\/img\/coding\/shift-3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/coding\/shift-3.jpg",
+      "initialSize" : 36880,
       "fileType" : 4096
     },
     "\/culture-teamworkshop.jade" : {
@@ -720,13 +795,24 @@
       "outputAbbreviatedPath" : "\/build\/culture-teamworkshop.html",
       "fileType" : 512
     },
+    "\/build\/img\/coding\/nexonprojects-2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-2.jpg",
+      "initialSize" : 72994,
+      "fileType" : 4096
+    },
     "\/build\/graphics-voting.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/graphics-voting.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/build\/img\/graphics\/illustration-5.jpg" : {
@@ -735,7 +821,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-5.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-5.jpg",
       "initialSize" : 60709,
       "fileType" : 4096
@@ -757,20 +843,9 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonnet-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonnet-2.jpg",
       "initialSize" : 56992,
-      "fileType" : 4096
-    },
-    "\/build\/img\/work-list.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/work-list.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/work-list.jpg",
-      "initialSize" : 225843,
       "fileType" : 4096
     },
     "\/build\/img\/coding\/nexonprojects-4.jpg" : {
@@ -779,9 +854,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-4.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-4.jpg",
       "initialSize" : 68709,
+      "fileType" : 4096
+    },
+    "\/build\/img\/graphics\/voting-3.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-3.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-3.jpg",
+      "initialSize" : 61849,
       "fileType" : 4096
     },
     "\/coding-nexonnet.jade" : {
@@ -795,15 +881,15 @@
       "outputAbbreviatedPath" : "\/build\/coding-nexonnet.html",
       "fileType" : 512
     },
-    "\/build\/img\/graphics\/voting-3.jpg" : {
+    "\/build\/img\/work-list.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-3.jpg",
+      "inputAbbreviatedPath" : "\/build\/img\/work-list.jpg",
       "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-3.jpg",
-      "initialSize" : 61849,
+      "outputAbbreviatedPath" : "\/build\/img\/work-list.jpg",
+      "initialSize" : 225843,
       "fileType" : 4096
     },
     "\/build\/img\/graphics\/photo-2.jpg" : {
@@ -812,9 +898,20 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-2.jpg",
       "initialSize" : 18886,
+      "fileType" : 4096
+    },
+    "\/build\/img\/graphics\/box-3.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/box-3.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/box-3.jpg",
+      "initialSize" : 33194,
       "fileType" : 4096
     },
     "\/build\/img\/coding\/spot-3.jpg" : {
@@ -823,7 +920,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/spot-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/spot-3.jpg",
       "initialSize" : 89875,
       "fileType" : 4096
@@ -834,7 +931,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-6.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonprojects-6.jpg",
       "initialSize" : 83603,
       "fileType" : 4096
@@ -850,16 +947,14 @@
       "outputAbbreviatedPath" : "\/build\/culture-sports.html",
       "fileType" : 512
     },
-    "\/build\/img\/graphics\/illustration-4.jpg" : {
+    "\/build\/culture-sports.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-4.jpg",
-      "processed" : 1,
-      "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-4.jpg",
-      "initialSize" : 69274,
-      "fileType" : 4096
+      "inputAbbreviatedPath" : "\/build\/culture-sports.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
     },
     "\/build\/graphics-nf2.html" : {
       "ignoreWasSetByUser" : 0,
@@ -867,17 +962,19 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/graphics-nf2.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
-    "\/build\/culture-sports.html" : {
+    "\/build\/img\/graphics\/illustration-4.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/culture-sports.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-4.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-4.jpg",
+      "initialSize" : 69274,
+      "fileType" : 4096
     },
     "\/build\/img\/culture\/sports-1.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -885,7 +982,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/sports-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/sports-1.jpg",
       "initialSize" : 78003,
       "fileType" : 4096
@@ -907,7 +1004,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/culture-htmlworkshop.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/build\/img\/graphics\/nf2-2.jpg" : {
@@ -916,7 +1013,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/nf2-2.jpg",
       "initialSize" : 31556,
       "fileType" : 4096
@@ -927,7 +1024,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-7.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-7.jpg",
       "initialSize" : 51566,
       "fileType" : 4096
@@ -938,7 +1035,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-3.jpg",
       "initialSize" : 49370,
       "fileType" : 4096
@@ -960,7 +1057,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/nexonnet-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/nexonnet-1.jpg",
       "initialSize" : 82764,
       "fileType" : 4096
@@ -971,7 +1068,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/voting-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/voting-2.jpg",
       "initialSize" : 48640,
       "fileType" : 4096
@@ -993,7 +1090,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/coding-freelance.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/build\/img\/culture\/htmlworkshop-1.jpg" : {
@@ -1002,7 +1099,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-1.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-1.jpg",
       "initialSize" : 19072,
       "fileType" : 4096
@@ -1030,22 +1127,24 @@
       "outputAbbreviatedPath" : "\/includes\/build\/head.html",
       "fileType" : 512
     },
+    "\/build\/img\/graphics\/box-4.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/img\/graphics\/box-4.jpg",
+      "processed" : 1,
+      "outputAbbreviatedPath" : "\/build\/img\/graphics\/box-4.jpg",
+      "initialSize" : 37593,
+      "fileType" : 4096
+    },
     "\/build\/404.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/404.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/build\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/build\/img\/culture\/htmlworkshop-3.jpg" : {
@@ -1054,10 +1153,19 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-3.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/culture\/htmlworkshop-3.jpg",
       "initialSize" : 15803,
       "fileType" : 4096
+    },
+    "\/build\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/index.html",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 2048
     },
     "\/build\/coding-nexonnet.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1065,7 +1173,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/coding-nexonnet.html",
-      "outputAbbreviatedPath" : "No Output Path",
+      "outputAbbreviatedPath" : "\/No Output Path",
       "fileType" : 2048
     },
     "\/build\/img\/graphics\/illustration-2.jpg" : {
@@ -1074,7 +1182,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-2.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/illustration-2.jpg",
       "initialSize" : 30990,
       "fileType" : 4096
@@ -1085,7 +1193,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/coding\/logo.png",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/coding\/logo.png",
       "initialSize" : 4805,
       "fileType" : 8192
@@ -1108,7 +1216,7 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/build\/img\/graphics\/photo-5.jpg",
-      "processed" : 1,
+      "processed" : 0,
       "outputAbbreviatedPath" : "\/build\/img\/graphics\/photo-5.jpg",
       "initialSize" : 59835,
       "fileType" : 4096
@@ -1132,10 +1240,7 @@
     "sassAutoOutputPathStyle" : 2,
     "stylusAutoOutputPathReplace2" : "css",
     "lessAutoOutputPathStyle" : 2,
-    "lessIECompatibility" : 1,
     "genericWebpageFileExtensionsString" : "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
-    "lessStrictUnits" : 0,
-    "lessStrictMath" : 0,
     "coffeeMinifyOutput" : 1,
     "javascriptOutputSuffix" : ".min",
     "jadeOutputStyle" : 1,
@@ -1284,7 +1389,6 @@
     "jadeCompileDebug" : 1,
     "slimRailsCompatible" : 0,
     "kitAutoOutputPathReplace2" : "",
-    "lessRelativeURLS" : 0,
     "lessDebugStyle" : 0,
     "javascriptAutoOutputPathRelativePath" : "build\/js",
     "slimAutoOutputPathStyle" : 0
