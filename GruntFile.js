@@ -25,22 +25,37 @@ module.exports =function(grunt){
       },
       coffee:{
         compile: {
+            options:{
+              bare:true
+            },
             files: {
               'build/js/scripts.js': ['site/scripts/*.coffee'] // compile and concat into single file
             }
           }        
       },
+      uglify: {
+        my_target: {
+          files: {
+            'build/js/scripts.js': ['build/js/scripts.js']
+          }
+        }
+      },      
       stylus:{
         compile: {
+          options:{
+            import:[
+              'nib'
+            ]
+          },
           files: {
-            'build/css/styles.css': ['site/styles/*.styl'] // compile and concat into single file
+            'build/css/styles.css': ['site/styles/styles.styl'] // compile and concat into single file
           }
         }
 
       },
       jade:{
         compile:{
-          options: {pretty:true},
+          options: {pretty:false},
           files:[{
             expand: true,
             cwd:    'site/',
@@ -70,9 +85,10 @@ module.exports =function(grunt){
      grunt.loadNpmTasks('grunt-contrib-coffee');
      grunt.loadNpmTasks('grunt-contrib-stylus');
      grunt.loadNpmTasks('grunt-contrib-jade');
-     grunt.loadNpmTasks('grunt-contrib-imagemin');
+     grunt.loadNpmTasks('grunt-contrib-imagemin'); 
+     grunt.loadNpmTasks('grunt-contrib-uglify');     
      
      //Run the task
-     grunt.registerTask('default', ['watch','coffee', 'stylus', 'jade','imagemin']);
-     grunt.registerTask('build', ['coffee', 'stylus', 'jade','imagemin']);
+     grunt.registerTask('default', ['watch','coffee', 'stylus', 'jade','uglify']);
+     grunt.registerTask('build', ['coffee', 'stylus', 'jade','uglify']);
 };

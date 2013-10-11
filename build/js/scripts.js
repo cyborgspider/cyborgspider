@@ -1,17 +1,1 @@
-(function() {
-  $(function() {
-    var filterMe;
-    $('.visit').attr('target', '_blank');
-    filterMe = function(e) {
-      var whichFilter;
-      e.preventDefault();
-      whichFilter = $(this).data('filter');
-      $(this).siblings().removeClass('active');
-      $(this).addClass('active');
-      $('#work-list li').filter(whichFilter).show();
-      return $('#work-list li').not(whichFilter).hide();
-    };
-    return $('#filter-nav').on('click', 'a', filterMe);
-  });
-
-}).call(this);
+$(function(){var a;return $(".visit").attr("target","_blank"),a=function(a){var b;return a.preventDefault(),b=$(this).data("filter"),$(this).siblings().removeClass("active"),$(this).addClass("active"),$("#work-list li").filter(b).show(),$("#work-list li").not(b).hide()},$("#filter-nav").on("click","a",a)});
