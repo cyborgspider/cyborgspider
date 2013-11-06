@@ -9,6 +9,7 @@ body{background:#fff;font:14px/24px Verdana,sans-serif;color:#2b3336}
 a{text-decoration:none;color:#fff;}
 h1{font-family:'Ubuntu'}
 p{margin-bottom:17px;clear:both}
+p>a{color:#4d93b1}
 .dn{display:none}
 .left{float:left}
 .right{float:right}
@@ -57,6 +58,7 @@ nav a.active{color:#2b3336}
 #sports{background-position:0 -1980px}
 #shift{background-position:0 -2200px}
 #papercraft{background-position:0 -2420px}
+#stylus{background-position:0 -2640px}
 @media screen and (max-width:400px){#wrap{padding:0 10px}
 #logo{float:none;margin:0 auto 10px}
 #nav-wrap{height:auto;position:absolute;padding:10px 0;}
