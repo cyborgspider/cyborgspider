@@ -45,7 +45,7 @@ nav a.active{color:#2b3336}
 .more{background:#c1272d;z-index:2;color:#fff;position:absolute;padding:3px 10px;bottom:0;right:0;-webkit-box-shadow:1px 1px 3px #666;box-shadow:1px 1px 3px #666}
 .description{color:#fff;background:#2b3336;background:rgba(0,0,0,0.8);z-index:1;position:absolute;width:100%;height:100%;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:opacity 0.2s linear;-moz-transition:opacity 0.2s linear;-o-transition:opacity 0.2s linear;-ms-transition:opacity 0.2s linear;transition:opacity 0.2s linear;}
 .description p{position:absolute;width:180px;top:40px;left:20px;font-weight:bold}
-#nexonnet,#nexonprojects,#freelance,#spot,#nf2,#photography,#voting,#illustration,#teamworkshop,#htmlworkshop,#sports,#shift,#papercraft{background:url("../img/work-list.jpg") no-repeat}
+#nexonnet,#nexonprojects,#freelance,#spot,#nf2,#photography,#voting,#illustration,#teamworkshop,#htmlworkshop,#sports,#shift,#papercraft,#stylus{background:url("../img/work-list.jpg") no-repeat}
 #nexonnet{background-position:0 0}
 #nexonprojects{background-position:0 -220px}
 #freelance{background-position:0 -440px}
