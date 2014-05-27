@@ -5,106 +5,124 @@ html
     #wrap
       include includes/header
       #content
-        h2 Welcome to the portfolio of Carlos Ortega. I love to design and code interactive digital experiences.
+        h1 Welcome to the portfolio of Carlos Ortega. I love to design and code interactive digital experiences.
         #filter-nav
           p Filer by:
           a.active(data-filter="*", href="#") All
           a(data-filter=".coding", href="#") Coding
-          a(data-filter=".graphics", href="#") Graphics
+          a(data-filter=".design", href="#") Design
           a(data-filter=".culture",href="#") Culture
 
         ul#work-list
-          li#stylus.culture
+          li(data-article="stylus").culture
             a(href="culture-stylus")
               .info
                 span.tag Culture
               .description
                 p CSS Pre-processors are amazing, and I had the honor and privelege to present Stylus to the HTML5 LA Developer's group...
                 span.more See More
-          li#papercraft.graphics
-            a(href="graphics-papercraft")
+          li(data-article="papercraft").design
+            a(href="design-papercraft")
               .info
                 span.tag Illustrations
               .description
                 p I went through a papercraft phase a couple years back, printing out and building these little guys to my heart's content...
                 span.more See More
-          li#shift.coding
+          li(data-article="shift").coding
             a(href="coding-shift")
               .info
                 span.tag HTML+CSS+JS
               .description
                 p SHIFT is the real-time marketing platform for brands and agencies, enabling marketers to collaborate...
                 span.more See More
-          li#nexonnet.coding
+          li(data-article="nexonnet").coding
             a(href="coding-nexonnet")
               .info
                 span.tag HTML+CSS+JS
               .description
                 p I handled front-end developer duties on nexon.net. Nexon is the industry leader in free to play massively multiplayer online games...
                 span.more See More
-          li#nexonprojects.coding
+          li(data-article="nexonprojects").coding
             a(href="coding-nexonprojects")
               .info
                 span.tag HTML+CSS+JS
               .description
                 p Whether it is a CMS-driven post page, content update teaser pages, a full site build, marketing campaign or lightbox special events...
                 span.more See More
-          li#freelance.coding
+          li(data-article="freelance").coding
             a(href="coding-freelance")
               .info
                 span.tag HTML+CSS+JS
               .description
                 p From corporate websites, restaurant social networks, to my own personal side projects, I enjoy practicing my craft...
                 span.more See More
-          li#nf2.graphics
-            a(href="graphics-nf2")
+          li(data-article="nf2").design
+            a(href="design-nf2")
               .info
                 span.tag Branding
               .description
                 p A forthcoming addition to the Nexon game lineup, my team was entrusted with creating a brand and positioning guide...
                 span.more See More
-          li#photography.graphics
-            a(href="graphics-photography")
+          li(data-article="photography").design
+            a(href="design-photography")
               .info
                 span.tag Photography
               .description
                 p Armed with my Sony a300 or meager phone camera, you never know when a good shot is aching to be taken.
                 span.more See More
-          li#voting.graphics
-            a(href="graphics-voting")
+          li(data-article="voting").design
+            a(href="design-voting")
               .info
                 span.tag Graphic Design
               .description
                 p I was approached by my company to create a presentation for the office, imploring people to vote...
                 span.more See More
-          li#illustration.graphics
-            a(href="graphics-illustration")
+          li(data-article="illustration").design
+            a(href="design-illustration")
               .info
                 span.tag Illustrations
               .description
                 p Sometimes one needs to get away from lines of code or step away from the conventional and just plain draw.
                 span.more See More
-          li#teamworkshop.culture
+          li(data-article="teamworkshop").culture
             a(href="culture-teamworkshop")
               .info
                 span.tag Culture
               .description
                 p Always seeking to inspire and to be inspired by others, I ran a creative workshop...
                 span.more See More
-          li#htmlworkshop.culture
+          li(data-article="htmlworkshop").culture
             a(href="culture-htmlworkshop")
               .info
                 span.tag Culture
               .description
                 p I love teaching and mentoring others, and this workshop was an opportunity to enrich the skillsets...
                 span.more See More
-          li#sports.culture
+          li(data-article="sports").culture
             a(href="culture-sports")
               .info
                 span.tag Culture
               .description
                 p For the past three years, I've organized company sporting events. Sometimes we have awesome prizes...
                 span.more See More
+
+        section#contact
+          h1 Contact Me
+          a(href='#') Email
+          a(href="#") LinkedIn
+          2(href="#") Twitter
+
+        section#about
+          h1 About Me
+          p
+            img.left(src="img/me.jpg",alt="Me")
+            |My name is Carlos Ortega, and I currently live and work in Los Angeles, CA. I grew up with drawing NBA team logos and making my own
+            |personal comic books, so it's only natural that I ended up in a creative career. I'm seeking an environment of learning, collaboration,
+            |mentoring and passion, a place where my contributions can enhance the experience of clients and colleagues alike!
+          a(href="#") Resume
+
+        section#copyright
+          p &copy; 2014 Carlos Ortega All Rights Reserved
 
 
     script(src="http://code.jquery.com/jquery-2.0.0.min.js")

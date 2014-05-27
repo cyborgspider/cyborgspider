@@ -22,7 +22,7 @@ img.left{margin-right:20px;margin-bottom:10px}
 nav{padding:0 80px;}
 nav a{text-align:left;float:left;margin-right:30px;font-size:18px;}
 nav a.active{color:#2b3336}
-#project-nav{margin-top:8px;margin-bottom:10px;float:right}
+.project-nav{margin-top:8px;margin-bottom:10px;float:right}
 #prev-project,#next-project{background:#66aec7;-webkit-border-radius:2px;border-radius:2px;padding:2px 10px 4px;text-align:center;color:#fff;display:table;-webkit-box-shadow:0 1px 0 0 rgba(0,0,0,0.2);box-shadow:0 1px 0 0 rgba(0,0,0,0.2);display:inline-block}
 #prev-project:hover,#next-project:hover{background:#56666c}
 #prev-project{margin-right:5px}
@@ -32,6 +32,8 @@ nav a.active{color:#2b3336}
 .visit:hover{background:#56666c}
 #top{background:#66aec7;-webkit-border-radius:2px;border-radius:2px;padding:2px 10px 4px;text-align:center;color:#fff;display:table;-webkit-box-shadow:0 1px 0 0 rgba(0,0,0,0.2);box-shadow:0 1px 0 0 rgba(0,0,0,0.2);margin:30px auto 0}
 #top:hover{background:#56666c}
+#work-detail article{display:none}
+#work-detail article.active{display:block}
 .home h2{font-size:52px;line-height:60px;padding:20px 0;float:left;clear:both}
 .home #content{padding:80px 0 40px}
 #filter-nav{clear:both;width:300px;margin:0 auto;}
