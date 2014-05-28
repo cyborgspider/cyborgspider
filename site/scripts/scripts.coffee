@@ -13,6 +13,12 @@ $ ->
 
   $('.visit').attr('target','_blank')
 
+  $('.nav-btn').on 'click', ->
+    $('body').toggleClass 'open'
+
+  $('.mobile-menu').on 'click','a', ->
+    $('body').toggleClass 'open'
+
   filterMe = (e) ->
     e.preventDefault()
     whichFilter = $(this).data 'filter'

@@ -21,7 +21,7 @@ module.exports =function(grunt){
         img:{
           files: ['build/img/*'],
           tasks: ['imagemin']
-        }       
+        }
       },
       coffee:{
         compile: {
@@ -31,7 +31,7 @@ module.exports =function(grunt){
             files: {
               'build/js/scripts.js': ['site/scripts/*.coffee'] // compile and concat into single file
             }
-          }        
+          }
       },
       uglify: {
         my_target: {
@@ -39,7 +39,7 @@ module.exports =function(grunt){
             'build/js/scripts.js': ['build/js/scripts.js']
           }
         }
-      },      
+      },
       stylus:{
         compile: {
           options:{
@@ -64,30 +64,16 @@ module.exports =function(grunt){
             dest:   "build/"
           }]
         }
-      },
-      imagemin:{
-        options: {                  
-          optimizationLevel: 7
-        },        
-        dynamic:{
-          files:[{
-            expand: true,
-            cwd:    'build/img/',
-            src:    ['**/*.{jpg,gif}'],
-            dest:   'build/img/'
-          }]
-        }
       }
      });
-     
+
      //Register (load) the plugins to make them available in Grunt
      grunt.loadNpmTasks('grunt-contrib-watch');
      grunt.loadNpmTasks('grunt-contrib-coffee');
      grunt.loadNpmTasks('grunt-contrib-stylus');
      grunt.loadNpmTasks('grunt-contrib-jade');
-     grunt.loadNpmTasks('grunt-contrib-imagemin'); 
-     grunt.loadNpmTasks('grunt-contrib-uglify');     
-     
+     grunt.loadNpmTasks('grunt-contrib-uglify');
+
      //Run the task
      grunt.registerTask('default', ['watch','coffee', 'stylus', 'jade','uglify']);
      grunt.registerTask('build', ['coffee', 'stylus', 'jade','uglify']);

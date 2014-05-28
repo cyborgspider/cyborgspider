@@ -17,6 +17,12 @@ $(function() {
   var filterMe, hashChange, projectNavigator;
   loadHash();
   $('.visit').attr('target', '_blank');
+  $('.nav-btn').on('click', function() {
+    return $('body').toggleClass('open');
+  });
+  $('.mobile-menu').on('click', 'a', function() {
+    return $('body').toggleClass('open');
+  });
   filterMe = function(e) {
     var whichFilter;
     e.preventDefault();
