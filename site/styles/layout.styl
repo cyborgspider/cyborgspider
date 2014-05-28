@@ -21,6 +21,9 @@ p
   clear         both
 p>a
   color $blue
+.section-title
+  font-size 22px
+  margin-bottom 16px
 
 .dn
   display none
@@ -34,18 +37,19 @@ img.left
   margin-bottom 10px
 
 #wrap
-  padding 0 80px
+  padding 0 20px
+
 #content
   clear    both
   position relative
   padding  100px 0 40px
   overflow hidden
-  article
-    h1
-      font-size     32px
-      margin-bottom 17px
-      line-height   36px
-      float         left
+
+.project-title
+  font-size     32px
+  margin-bottom 17px
+  line-height   36px
+  text-align center
 
 #logo
   width        64px
@@ -53,6 +57,7 @@ img.left
   text-indent  -9999px
   float        left
   margin-top   3px
+
 #nav-wrap
   text-transform uppercase
   height         70px
@@ -66,7 +71,7 @@ img.left
   box-shadow     0 1px 0 0 rgba(0,0,0,0.2)
 
 nav
-  padding 0 80px
+  padding 0 20px
   a
     text-align   left
     float        left
@@ -75,17 +80,49 @@ nav
     &.active
       color  $black
 
-.project-nav
-  margin-top    8px
-  margin-bottom 10px
-  float         right
-#prev-project
-#next-project
+.nav-links
+  display none
+  @media only screen and (min-width:768px)
+    display block
+
+.nav-btn
+  width 20px
+  height 20px
+  background red
+  display block
+  position absolute
+  top 20px
+  right 20px
+  @media only screen and (min-width:768px)
+    display none
+
+.btn-nav
+  margin-bottom 20px
+  text-align    center
+  clearfix()
+
+//BUTTONS AND LINKS
+.btn
   myButton()
   display inline-block
+  margin-left 5px
 #prev-project
-  margin-right 5px
+  margin-left 0
+.visit
+  display block
+  color $black
+.sns-btn
+  width         48px
+  height        48px
+  line-height   48px
+  display       inline-block
+  background    $blue
+  border-radius 100%
+  margin-left   8px
+  &:first-child
+    margin-left 0
 
+//IMAGE AND PROJECTS
 .img-wrap
   margin        auto
   margin-bottom 10px
@@ -98,16 +135,35 @@ nav
     display   block
     margin    auto
 
-.visit
-  myButton()
-  margin     0 auto 20px
-
-#top
-  myButton()
-  margin     30px auto 0
-
 #work-detail
+  margin-bottom 20px
   article
     display none
   article.active
     display block
+
+.project-content
+  clear both
+
+
+//CONTACT
+#contact
+  padding 100px 0
+
+
+//ABOUT ME
+#about
+  padding 100px 0
+
+.avatar
+  width         96px
+  height        96px
+  border-radius 100%
+  overflow hidden
+  &>img
+    height 100%
+
+//COPYRIGHT
+#copyright
+  font-size 10px
+  text-align center
