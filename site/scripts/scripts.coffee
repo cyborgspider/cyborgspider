@@ -16,6 +16,11 @@ $ ->
   $('.nav-btn').on 'click', ->
     $('body').toggleClass 'open'
 
+  $('.nav-links').on 'click', 'a', ->
+    $('body').removeClass 'open'
+
+  $('#logo').on 'click', ->
+    window.location = './'
 
   filterMe = (e) ->
     e.preventDefault()
@@ -69,3 +74,4 @@ $ ->
   $('#prev-project').click (e) ->
     e.preventDefault()
     projectNavigator('prev')
+

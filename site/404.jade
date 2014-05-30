@@ -1,28 +1,11 @@
 !!!5
 html
   include includes/head
-  body.sub
-    #wrap
-      include includes/header
-      #content
-        h1 FO' O' FO'
-        p Oh noes, you've reached a page that doesn't exist. My bad, please go back home and try again.
+  body
+    include includes/header
+    #content
+      h1 FO' O' FO'
+      p Oh noes, you've reached a page that doesn't exist. My bad, please go back home and try again.
 
-        section#contact
-          h2 Contact Me
-          a(href='#') Email
-          a(href="#") LinkedIn
-          a(href="#") Twitter
-
-        section#about
-          h2 About Me
-          p
-            img.left(src="img/me.jpg",alt="Me")
-            |My name is Carlos Ortega, and I currently live and work in Los Angeles, CA. I grew up with drawing NBA team logos and making my own
-            |personal comic books, so it's only natural that I ended up in a creative career. I'm seeking an environment of learning, collaboration,
-            |mentoring and passion, a place where my contributions can enhance the experience of clients and colleagues alike!
-          a(href="#") Resume
-
-        section#copyright
-          p &copy; 2014 Carlos Ortega All Rights Reserved
+    include includes/footer
 

@@ -20,6 +20,12 @@ $(function() {
   $('.nav-btn').on('click', function() {
     return $('body').toggleClass('open');
   });
+  $('.nav-links').on('click', 'a', function() {
+    return $('body').removeClass('open');
+  });
+  $('#logo').on('click', function() {
+    return window.location = './';
+  });
   filterMe = function(e) {
     var whichFilter;
     e.preventDefault();

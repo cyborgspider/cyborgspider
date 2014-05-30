@@ -1,24 +1,19 @@
-.home
-  h2
-    font-size   52px
-    line-height 60px
-    padding     20px 0
-    float       left
-    clear       both
-  #content
-    padding  80px 0 40px
+body.home
+  .project-title
+    line-height 1.4
 
 #filter-nav
-  clear both
-  width 300px
-  margin 0 auto
+  clear         both
+  text-align    center
+  margin-top    24px
+  margin-bottom 36px
   p
-    float        left
-    margin-right 10px
+    display      inline-block
+    margin-right 12px
     color        #56666c
   a
-    float        left
-    margin-right 10px
+    display        inline-block
+    margin-right 12px
     text-align   center
     color        $black
     &:hover
@@ -26,16 +21,20 @@
       text-decoration underline
 
 #work-list
-  clear both
-  margin-left 20px
-  li
-    width    220px
-    height   220px
-    float    left
-    position relative
-    margin   0 10px 10px 0
-    &:hover  .description
-    &.active .description
+  clear    both
+  overflow hidden
+  &>li
+    width     100%
+    height    220px
+    max-width 400px
+    position  relative
+    margin 0 auto 12px
+    @media only screen and (min-width:768px)
+      width  220px
+      margin 0 12px 12px 0
+      float  left
+    &:hover   .description
+    &.active  .description
       opacity 1
 
 .tag
@@ -46,7 +45,7 @@
   color      $black
   background #abccd8
   padding    3px 10px
-  box-shadow 1px 1px 3px #666
+  box-shadow 1px 1px 2px rgba(0,0,0,0.2)
 
 .more
   background #c1272d
@@ -56,7 +55,6 @@
   padding    3px 10px
   bottom     0
   right      0
-  box-shadow 1px 1px 3px #666
 
 .description
   color      #fff
@@ -70,7 +68,9 @@
   transition opacity 0.2s linear
   p
     position    absolute
-    width       180px
-    top         40px
-    left        20px
+    width       80%
+    top         48px
+    left        24px
     font-weight bold
+    @media only screen and (min-width:768px)
+      top 36px
