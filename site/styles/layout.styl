@@ -155,6 +155,10 @@ nav
   color $blue-nav
   &>.fa
    margin-right 4px
+  @media only screen and (min-width:768px)
+    max-width 600px
+    margin-left auto
+    margin-right auto
 
 .sns-btn
   width            48px
@@ -198,6 +202,11 @@ nav
     display none
   article.active
     display block
+  @media only screen and (min-width:768px)
+    p
+      max-width 600px
+      margin-left auto
+      margin-right auto
 
 .project-content
   clear both
@@ -207,10 +216,23 @@ nav
 #section-contact
   padding 40px 16% 20px
   background $blue-light
+  text-align center
+  @media only screen and (min-width:768px)
+    padding-left 20%
+    padding-right 20%
+    p
+      max-width 600px
+      margin 0 auto
 
 //ABOUT ME
 #section-about
   padding 40px 16%
+  text-align center
+  @media only screen and (min-width:768px)
+    padding-left  20%
+    padding-right 20%
+    max-width     600px
+    margin        0 auto
 .avatar
   width         96px
   height        96px
@@ -225,6 +247,9 @@ nav
   padding 0 16%
   font-size 10px
   text-align center
+  @media only screen and (min-width:768px)
+    max-width     600px
+    margin        0 auto
 
 //Anchor
 .anchor

@@ -11,17 +11,22 @@ loadHash = ->
 $ ->
   loadHash()
 
+  #Make all VISIT Links external
   $('.visit').attr('target','_blank')
 
+  #Toggle the menu button (only appears on less than 768px)
   $('.nav-btn').on 'click', ->
     $('body').toggleClass 'open'
 
+  #Once the link is chosen on the dropdown, close it. Hmm, seems like a better way to manage this
   $('.nav-links').on 'click', 'a', ->
     $('body').removeClass 'open'
 
+  #Go home on logo click
   $('#logo').on 'click', ->
     window.location = './'
 
+  #Homepage filtering
   filterMe = (e) ->
     e.preventDefault()
     whichFilter = $(this).data 'filter'
@@ -31,6 +36,13 @@ $ ->
     $('#work-list li').not(whichFilter).hide()
 
   $('#filter-nav').on 'click', 'a', filterMe
+
+  #Handle navigation for homepage (we've ditched standard HTML and are using DHTML)
+  homeNav = (section) ->
+    section = $(this).data 'article'
+    window.location = 'work.html#'+section
+
+  $('#work-list').on 'click', 'li', homeNav
 
   hashChange = (section) ->
     window.location.hash = section

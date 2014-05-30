@@ -14,7 +14,7 @@ loadHash = function() {
 };
 
 $(function() {
-  var filterMe, hashChange, projectNavigator;
+  var filterMe, hashChange, homeNav, projectNavigator;
   loadHash();
   $('.visit').attr('target', '_blank');
   $('.nav-btn').on('click', function() {
@@ -36,6 +36,11 @@ $(function() {
     return $('#work-list li').not(whichFilter).hide();
   };
   $('#filter-nav').on('click', 'a', filterMe);
+  homeNav = function(section) {
+    section = $(this).data('article');
+    return window.location = 'work.html#' + section;
+  };
+  $('#work-list').on('click', 'li', homeNav);
   hashChange = function(section) {
     window.location.hash = section;
     return window.scrollTo(0, 0);

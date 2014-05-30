@@ -1,6 +1,10 @@
 body.home
   .project-title
     line-height 1.4
+    @media only screen and (min-width:768px)
+      max-width 600px
+      margin-left auto
+      margin-right auto
 
 #filter-nav
   clear         both
@@ -29,6 +33,7 @@ body.home
     max-width 400px
     position  relative
     margin 0 auto 12px
+    cursor pointer
     @media only screen and (min-width:768px)
       width  220px
       margin 0 12px 12px 0
