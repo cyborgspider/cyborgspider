@@ -7,8 +7,6 @@ body
   background #fff
   font       14px/24px Verdana, sans-serif
   color      $black
-  &.open
-    overflow hidden
 
 a
   text-decoration none
@@ -41,8 +39,6 @@ img.left
 .wrap
   padding    0 20px
   transition all 0.4s ease-out
-  body.open &
-    transform translateX(-200px)
 
 #content
   clear    both
@@ -62,6 +58,7 @@ img.left
   text-indent  -9999px
   float        left
   margin-top   2px
+  margin-right 24px
 
 #nav-wrap
   text-transform uppercase
@@ -77,42 +74,62 @@ img.left
 
 nav
   padding 0 20px
-  a
-    text-align   left
-    float        left
-    margin-right 30px
-    font-size    18px
-    &.active
-      color  $black
 
 .nav-links
-  display none
+  max-height 0
+  overflow   hidden
+  margin     0 -20px
+  transition all 0.4s ease-in-out
   @media only screen and (min-width:768px)
-    display block
+    max-height none
+    margin     0 0 0 30px
+    transition none
+  body.open &
+    max-height 20em
+    clear both
+  & > a
+    float      none
+    text-align left
+    clear      both
+    width      100%
+    font-size  18px
+    display    block
+    background $blue-nav
+    border-bottom solid 1px $black
+    padding-left 24px
+    &> .fa
+      color white
+      margin-right 10px
+      @media only screen and (min-width:768px)
+        display none
+    @media only screen and (min-width:768px)
+      float      left
+      margin     0 30px 0 0
+      padding    0
+      clear      none
+      border     none
+      width      auto
+      background transparent
+      display    inline-block
+    &.active
+    &:hover
+      color  $black
+      &> .fa
+        color $black
 
 .nav-btn
-  width      20px
-  height     20px
-  background red
-  display    block
-  position   absolute
-  top        20px
-  right      20px
-  cursor     pointer
+  display   block
+  position  absolute
+  top       14px
+  right     24px
+  cursor    pointer
+  font-size 32px
+  color     white
+  &:hover
+    color $black
   @media only screen and (min-width:768px)
-    display none
+    display none !important
 
-.mobile-menu
-  position   fixed
-  top        0
-  right      -200px
-  z-index    10
-  width      200px
-  height     100%
-  background $blue
-  transition all 0.4s ease-out
-  body.open &
-    transform translateX(-200px)
 
 .btn-nav
   margin-bottom 20px
@@ -124,6 +141,9 @@ nav
   myButton()
   display inline-block
   margin-left 5px
+  &>i
+    font-size 20px
+    vertical-align middle
 #prev-project
   margin-left 0
 .visit
@@ -139,6 +159,14 @@ nav
   margin-left   8px
   &:first-child
     margin-left 0
+  &> .fa
+    font-size      24px
+    color          white
+    vertical-align middle
+    &:hover
+      color $black
+    &.fa-envelope
+      margin-top -3px
 
 //IMAGE AND PROJECTS
 .img-wrap
@@ -167,6 +195,8 @@ nav
   clear both
 
 //CONTACT
+#contact
+  margin 100px 0
 
 //ABOUT ME
 .avatar
