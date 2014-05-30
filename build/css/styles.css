@@ -73,7 +73,7 @@ body.home .project-title{line-height:1.4;}
 #filter-nav p{display:inline-block;margin-right:12px;color:#56666c}
 #filter-nav a{display:inline-block;margin-right:12px;text-align:center;color:#2b3336;}
 #filter-nav a:hover,#filter-nav a.active{text-decoration:underline}
-#work-list{clear:both;overflow:hidden;}
+#work-list{clear:both;overflow:hidden;margin-bottom:24px;}
 #work-list>li{width:100%;height:220px;max-width:400px;position:relative;margin:0 auto 12px;cursor:pointer;}
 @media only screen and (min-width:768px){#work-list>li{width:220px;margin:0 12px 12px 0;float:left}
 }#work-list>li:hover .description,#work-list>li.active  .description{opacity:1;-ms-filter:none;filter:none}
