@@ -1,6 +1,7 @@
 //Handle the left/right navigation on the page
 import $ from 'jquery';
 import hashChange from './hashChange';
+import loadHash from './loadHash';
 
 var projectNavigator = function(direction){
   let currentSection = $('#work-detail').find('article.active'),
@@ -29,6 +30,7 @@ var projectNavigator = function(direction){
       hashChange(prevHash)
     }
   }
+  loadHash();
 }
 
 export default projectNavigator;

@@ -32,7 +32,7 @@ gulp.task('watch', function(){
   $.livereload.listen();
   gulp.watch('site/stylus/**/*', ['stylus']);
   gulp.watch(['**/*.jade', '*.jade'], ['html']);
-  gulp.watch('site/scripts/**/*', ['js-modules']);
+  gulp.watch('site/scripts/**/*', ['js-modules', 'js-subpage']);
 });
 
 /**
@@ -41,13 +41,13 @@ gulp.task('watch', function(){
 gulp.task('images', function(){
   //Disabled in the inital build. Put inside gulp build when needed.
   return gulp
-    .src('./images/*')
+    .src('./site/images/**/*')
     .pipe(gulp.dest(config.outputDir + '/img'))
 });
 
 gulp.task('stylus', function(){
   var nib  = require('nib'),
-    jeet = require('jeet');
+      jeet = require('jeet');
 
   return gulp
     .src('./site/styles/styles.styl')
@@ -73,6 +73,17 @@ gulp.task('js-modules', function(){
   .pipe(gulp.dest(config.outputDir + '/js'))
 });
 
+gulp.task('js-subpage', function(){
+  browserify({
+    entries:'./site/scripts/work.js',
+    debug:true
+  })
+  .transform(babelify)
+  .bundle()
+  .pipe(source('work.js'))
+  .pipe(gulp.dest(config.outputDir + '/js'))
+});
+
 gulp.task('html', function(){
   return gulp
     .src(['./site/*.jade'])
@@ -84,7 +95,11 @@ gulp.task('html', function(){
 /**
  * Build/watch/deploy tasks
  */
-gulp.task('default', ['clean'], function(){
+gulp.task('default', function(){
   console.log('Building, watching and starting server...');
-  gulp.start('html', 'stylus', 'js-modules', 'server', 'watch');
+  gulp.start('html', 'stylus', 'js-modules', 'js-subpage', 'images', 'server', 'watch');
+});
+gulp.task('build', ['clean'], function(){
+  console.log('Compiling and prepping for deployment...');
+  gulp.start('html','stylus','js-modules', 'js-subpage', 'images');
 });

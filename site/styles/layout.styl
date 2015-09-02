@@ -14,8 +14,9 @@ a
   &:hover
     color $black
 p
-  margin-bottom 16px
   clear         both
+  margin-bottom 16px
+
   &>a
     color $blue
 
@@ -23,10 +24,11 @@ p
   transition color 0.2s ease-out
 
 .section-title
+  font-family   'Ubuntu'
   font-size     28px
   margin-bottom 28px
   text-align    center
-  font-family 'Ubuntu'
+
 .dn
   display none
 .left
@@ -40,77 +42,84 @@ img.left
 
 #content
   clear    both
-  position relative
-  padding  92px 20px 20px
   overflow hidden
+  padding  92px 20px 20px
+  position relative
 
 .project-title
+  font-family   'Ubuntu'
   font-size     32px
-  margin-bottom 36px
   line-height   36px
-  text-align center
-  font-family 'Ubuntu'
+  margin-bottom 36px
+  text-align    center
 
 #logo
-  width        56px
-  height       56px
-  text-indent  -9999px
-  float        left
-  margin-top   2px
-  margin-right 24px
   cursor       pointer
+  float        left
+  height       56px
+  margin-right 24px
+  margin-top   2px
+  text-indent  -9999px
+  width        56px
 
 #nav-wrap
-  text-transform uppercase
-  height         60px
-  width          100%
   background     $blue-nav
-  position       fixed
-  z-index        3
-  left           0
-  top            0
-  line-height    60px
   box-shadow     0 1px 0 0 rgba(0,0,0,0.2)
+  height         60px
+  left           0
+  line-height    60px
+  position       fixed
+  text-transform uppercase
+  top            0
+  width          100%
+  z-index        3
 
 nav
   padding 0 20px
 
 .nav-links
+  margin     0 -20px
   max-height 0
   overflow   hidden
-  margin     0 -20px
   transition all 0.4s ease-in-out
+
   @media only screen and (min-width:768px)
-    max-height none
     margin     0 0 0 30px
+    max-height none
     transition none
+
   body.open &
-    max-height 20em
-    clear both
-  & > a
-    float      none
-    text-align left
     clear      both
-    width      100%
-    font-size  16px
-    display    block
+    max-height 20em
+
+  & > a
     background $blue-nav
     border-bottom solid 1px $blue
+    clear      both
+    display    block
+    float      none
+    font-size  16px
     padding-left 24px
+    text-align left
+    width      100%
+
     &> .fa
-      color white
+      color        white
       margin-right 10px
+
       @media only screen and (min-width:768px)
         display none
+
     @media only screen and (min-width:768px)
+      background transparent
+      border     none
+      clear      none
+      display    inline-block
       float      left
       margin     0 30px 0 0
       padding    0
-      clear      none
-      border     none
       width      auto
-      background transparent
-      display    inline-block
+
     &.active
     &:hover
       color  $black
@@ -118,18 +127,18 @@ nav
         color $black
 
 .nav-btn
-  display   block
-  position  absolute
-  top       14px
-  right     24px
-  cursor    pointer
-  font-size 32px
   color     white
+  cursor    pointer
+  display   block
+  font-size 32px
+  position  absolute
+  right     24px
+  top       14px
+
   &:hover
     color $blue-light
   @media only screen and (min-width:768px)
     display none !important
-
 
 .btn-nav
   margin-bottom 40px
@@ -144,30 +153,34 @@ nav
   myButton()
   display inline-block
   margin-left 5px
+
   &>.fa
     font-size 20px
     vertical-align middle
+
 #prev-project
   margin-left 0
 
 .visit
+  color   $blue-nav
   display block
-  color $blue-nav
+
   &>.fa
    margin-right 4px
   @media only screen and (min-width:768px)
-    max-width 600px
-    margin-left auto
+    margin-left  auto
     margin-right auto
+    max-width    600px
 
 .sns-btn
-  width            48px
-  height           48px
-  line-height      48px
-  display          inline-block
   background-color $magenta
   border-radius    100%
+  display          inline-block
+  height           48px
+  line-height      48px
   margin-left      8px
+  width            48px
+
   &:hover
     &> .fa
       color $blue-nav
@@ -182,19 +195,20 @@ nav
 
 //IMAGE AND PROJECTS
 .img-wrap
+  box-sizing    border-box
   margin        auto
   margin-bottom 12px
   width         100%
-  box-sizing border-box
+
   @media only screen and (min-width:768px)
     width 640px
 
   &>img
-    max-width 100%
-    height    auto
+    border    solid 1px $gray-light
     display   block
+    height    auto
     margin    auto
-    border solid 1px $gray-light
+    max-width 100%
 
 #work-detail
   margin-bottom 20px
@@ -209,14 +223,15 @@ nav
       margin-right auto
 
 .project-content
-  clear both
+  clear         both
   margin-bottom 24px
 
 //CONTACT
 #section-contact
-  padding 40px 16% 20px
   background $blue-light
+  padding    40px 16% 20px
   text-align center
+
   @media only screen and (min-width:768px)
     padding-left 20%
     padding-right 20%

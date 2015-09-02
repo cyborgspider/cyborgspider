@@ -2,8 +2,8 @@ body.home
   .project-title
     line-height 1.4
     @media only screen and (min-width:768px)
-      max-width 600px
-      margin-left auto
+      max-width    600px
+      margin-left  auto
       margin-right auto
 
 #filter-nav
@@ -29,54 +29,57 @@ body.home
   overflow hidden
   margin-bottom 24px
   &>li
-    width     100%
+    cursor    pointer
     height    220px
+    margin    0 auto 12px
     max-width 400px
     position  relative
-    margin 0 auto 12px
-    cursor pointer
+    width     100%
+
     @media only screen and (min-width:768px)
-      width  220px
-      margin 0 12px 12px 0
       float  left
+      margin 0 12px 12px 0
+      width  220px
+
     &:hover   .description
     &.active  .description
       opacity 1
 
 .tag
-  position   absolute
+  background #abccd8
+  box-shadow 1px 1px 2px rgba(0,0,0,0.2)
+  color      $black
   left       0
+  padding    3px 10px
+  position   absolute
   top        0
   z-index    2
-  color      $black
-  background #abccd8
-  padding    3px 10px
-  box-shadow 1px 1px 2px rgba(0,0,0,0.2)
 
 .more
   background #c1272d
-  z-index    2
-  color      #fff
-  position   absolute
-  padding    3px 10px
   bottom     0
+  color      #fff
+  padding    3px 10px
+  position   absolute
   right      0
+  z-index    2
 
 .description
-  color      #fff
   background $black
   background rgba(0,0,0,0.8)
-  z-index    1
-  position   absolute
-  width      100%
+  color      #fff
   height     100%
   opacity    0
+  position   absolute
   transition opacity 0.2s linear
+  width      100%
+  z-index    1
   p
-    position    absolute
-    width       80%
-    top         48px
-    left        24px
     font-weight bold
+    left        24px
+    position    absolute
+    top         48px
+    width       80%
+
     @media only screen and (min-width:768px)
       top 36px
