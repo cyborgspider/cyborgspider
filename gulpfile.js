@@ -65,7 +65,7 @@ gulp.task('stylus', function(){
 gulp.task('js-modules', function(){
   browserify({
     entries:'./site/scripts/scripts.js',
-    debug:true
+    debug:false
   })
   .transform(babelify)
   .bundle()
@@ -76,7 +76,7 @@ gulp.task('js-modules', function(){
 gulp.task('js-subpage', function(){
   browserify({
     entries:'./site/scripts/work.js',
-    debug:true
+    debug:false
   })
   .transform(babelify)
   .bundle()
