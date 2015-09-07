@@ -97,9 +97,9 @@ gulp.task('html', function(){
  */
 gulp.task('default', function(){
   console.log('Building, watching and starting server...');
-  gulp.start('html', 'stylus', 'js-modules', 'js-subpage', 'images', 'server', 'watch');
+  gulp.start('html', 'stylus', 'images', 'server', 'watch');
 });
 gulp.task('build', ['clean'], function(){
   console.log('Compiling and prepping for deployment...');
-  gulp.start('html','stylus','js-modules', 'js-subpage', 'images');
+  gulp.start('html','stylus', 'images');
 });
