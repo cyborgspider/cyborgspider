@@ -1,8 +1,6 @@
 var gulp      = require('gulp'),
   $           = require('gulp-load-plugins')({lazy:true}),
   browserSync = require('browser-sync'),
-  browserify  = require('browserify'),
-  babelify    = require('babelify'),
   clean       = require('del'),
   source      = require('vinyl-source-stream');
 
@@ -30,9 +28,8 @@ gulp.task('clean', function(){
 
 gulp.task('watch', function(){
   $.livereload.listen();
-  gulp.watch('site/stylus/**/*', ['stylus']);
+  gulp.watch('site/styles/**/*', ['stylus']);
   gulp.watch(['**/*.jade', '*.jade'], ['html']);
-  gulp.watch('site/scripts/**/*', ['js-modules', 'js-subpage']);
 });
 
 /**
@@ -62,26 +59,14 @@ gulp.task('stylus', function(){
     .pipe($.livereload())
 });
 
-gulp.task('js-modules', function(){
-  browserify({
-    entries:'./site/scripts/scripts.js',
-    debug:false
-  })
-  .transform(babelify)
-  .bundle()
-  .pipe(source('scripts.js'))
-  .pipe(gulp.dest(config.outputDir + '/js'))
-});
-
-gulp.task('js-subpage', function(){
-  browserify({
-    entries:'./site/scripts/work.js',
-    debug:false
-  })
-  .transform(babelify)
-  .bundle()
-  .pipe(source('work.js'))
-  .pipe(gulp.dest(config.outputDir + '/js'))
+//Fow now, JS is handled entirely by the webpack process. Thus making this
+//task useless, but kept here for reference.
+gulp.task('js-webpack', function(){
+  return gulp
+    .src('./site/scripts/')
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest(config.outputDir + '/js'))
+    .pipe($.livereload())
 });
 
 gulp.task('html', function(){
@@ -100,6 +85,6 @@ gulp.task('default', function(){
   gulp.start('html', 'stylus', 'images', 'server', 'watch');
 });
 gulp.task('build', ['clean'], function(){
-  console.log('Compiling and prepping for deployment...');
-  gulp.start('html','stylus', 'images');
+  console.log('Please run webpack -p to build production JS.');
+  gulp.start('html', 'stylus', 'images');
 });
